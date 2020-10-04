@@ -58,8 +58,3 @@ app.post('/',function(req,res){
 app.listen(3000,function(){
     console.log("Server Started");
 })
-
-// 35866438af1270f21717d3d5fc138aff-us17
-
-// audience id
-// 494abb2bfd
