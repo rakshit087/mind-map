@@ -1,13 +1,19 @@
 import React from 'react';
-import {SafeAreaView, Text, View} from 'react-native';
+import {NavigationContainer} from '@react-navigation/native';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import {Dashboard} from './pages/Dashboard';
+
+const Tab = createBottomTabNavigator();
 
 const App = () => {
   return (
-    <SafeAreaView>
-      <View>
-        <Text>Hello</Text>
-      </View>
-    </SafeAreaView>
+    <NavigationContainer>
+      <Tab.Navigator>
+        <Tab.Screen name="Home" component={Dashboard} />
+        <Tab.Screen name="Statistics" component={Dashboard} />
+        <Tab.Screen name="Settings" component={Dashboard} />
+      </Tab.Navigator>
+    </NavigationContainer>
   );
 };
 
