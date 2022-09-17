@@ -1,19 +1,24 @@
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
-import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import {Provider as PaperProvider} from 'react-native-paper';
+import {createMaterialBottomTabNavigator} from '@react-navigation/material-bottom-tabs';
 import {Dashboard} from './pages/Dashboard';
+import {Statistics} from './pages/Statistics';
+import {Settings} from './pages/Settings';
 
-const Tab = createBottomTabNavigator();
+const Tab = createMaterialBottomTabNavigator();
 
 const App = () => {
   return (
-    <NavigationContainer>
-      <Tab.Navigator>
-        <Tab.Screen name="Home" component={Dashboard} />
-        <Tab.Screen name="Statistics" component={Dashboard} />
-        <Tab.Screen name="Settings" component={Dashboard} />
-      </Tab.Navigator>
-    </NavigationContainer>
+    <PaperProvider>
+      <NavigationContainer>
+        <Tab.Navigator>
+          <Tab.Screen name="Home" component={Dashboard} />
+          <Tab.Screen name="Statistics" component={Statistics} />
+          <Tab.Screen name="Settings" component={Settings} />
+        </Tab.Navigator>
+      </NavigationContainer>
+    </PaperProvider>
   );
 };
 
