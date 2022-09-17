@@ -9,7 +9,9 @@ const Tab = createMaterialBottomTabNavigator();
 
 export const NavigationBar = () => {
   return (
-    <Tab.Navigator initialRouteName="Home" shifting={true}>
+    <Tab.Navigator
+      initialRouteName="Home"
+      barStyle={{backgroundColor: '#ffffff'}}>
       <Tab.Screen
         name="Home"
         component={Dashboard}
