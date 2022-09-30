@@ -10,14 +10,60 @@ void main() {
   ));
 }
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({super.key});
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  //Declare Variables
+  late final TextEditingController _email;
+  late final TextEditingController _password;
+
+  @override
+  void initState() {
+    //Give Value to Variables
+    _email = TextEditingController();
+    _password = TextEditingController();
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    _email.dispose();
+    _password.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text("My Notes"),
+      ),
+      body: Column(
+        children: [
+          TextField(
+            controller: _email,
+            decoration: const InputDecoration(
+              hintText: "Enter your Email",
+            ),
+          ),
+          TextField(
+            controller: _password,
+            decoration: const InputDecoration(
+              hintText: "Enter your Password",
+            ),
+          ),
+          Center(
+            child: TextButton(
+              onPressed: () async {},
+              child: const Text("Sign Up"),
+            ),
+          ),
+        ],
       ),
     );
   }
