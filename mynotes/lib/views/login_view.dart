@@ -35,7 +35,7 @@ class _LoginViewState extends State<LoginView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("My Notes"),
+        title: const Text("Login"),
       ),
       body: FutureBuilder(
         future: Firebase.initializeApp(
@@ -86,6 +86,15 @@ class _LoginViewState extends State<LoginView> {
                       child: const Text("Login"),
                     ),
                   ),
+                  Center(
+                    child: TextButton(
+                      child: const Text("Not a user? SignUp!"),
+                      onPressed: () {
+                        Navigator.of(context).pushNamedAndRemoveUntil(
+                            '/register', (route) => false);
+                      },
+                    ),
+                  )
                 ],
               );
             default:
