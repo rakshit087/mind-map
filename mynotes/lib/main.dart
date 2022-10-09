@@ -34,11 +34,7 @@ class Routes extends StatelessWidget {
                 if (user?.emailVerified ?? false) {
                   return const Text("Verified");
                 } else {
-                  Navigator.of(context)
-                      .push(MaterialPageRoute(builder: (context) {
-                    return const VerifyEmail();
-                  }));
-                  return const Text("Not Verified");
+                  return const VerifyEmail();
                 }
               default:
                 return const Text("Loading");
