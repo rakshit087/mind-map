@@ -5,6 +5,7 @@ import 'package:mynotes/firebase_options.dart';
 import 'package:mynotes/views/login_view.dart';
 import 'package:mynotes/views/register_view.dart';
 import 'package:mynotes/views/verify_email.dart';
+import 'package:mynotes/views/notes_view.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -13,11 +14,12 @@ void main() {
     theme: ThemeData(
       primarySwatch: Colors.blue,
     ),
-    home: const LoginView(),
+    home: const HomeView(),
     routes: {
       '/login': (context) => const LoginView(),
       '/register': (context) => const RegisterView(),
-      '/home': (context) => const HomeView()
+      '/home': (context) => const HomeView(),
+      '/notes': (context) => const NotesView(),
     },
   ));
 }
@@ -27,25 +29,27 @@ class HomeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(title: const Text("Home")),
-        body: FutureBuilder(
-          future: Firebase.initializeApp(
-            options: DefaultFirebaseOptions.currentPlatform,
-          ),
-          builder: (context, snapshot) {
-            switch (snapshot.connectionState) {
-              case ConnectionState.done:
-                final user = FirebaseAuth.instance.currentUser;
-                if (user?.emailVerified ?? false) {
-                  return const Text("Verified");
-                } else {
-                  return const VerifyEmail();
-                }
-              default:
-                return const Text("Loading");
+    return FutureBuilder(
+      future: Firebase.initializeApp(
+        options: DefaultFirebaseOptions.currentPlatform,
+      ),
+      builder: (context, snapshot) {
+        switch (snapshot.connectionState) {
+          case ConnectionState.done:
+            final user = FirebaseAuth.instance.currentUser;
+            if (user != null) {
+              if (user?.emailVerified ?? false) {
+                return const NotesView();
+              } else {
+                return const VerifyEmail();
+              }
+            } else {
+              return const LoginView();
             }
-          },
-        ));
+          default:
+            return const CircularProgressIndicator();
+        }
+      },
+    );
   }
 }
