@@ -20,8 +20,8 @@ class _NotesViewState extends State<NotesView> {
             itemBuilder: (context) {
               return const [
                 PopupMenuItem(
-                  child: Text("Logout"),
                   value: MenuAction.logout,
+                  child: Text("Logout"),
                 )
               ];
             },
@@ -31,10 +31,12 @@ class _NotesViewState extends State<NotesView> {
                   bool shouldLogout = await showLogoutAlert(context);
                   if (shouldLogout) {
                     await FirebaseAuth.instance.signOut();
-                    Navigator.of(context).pushNamedAndRemoveUntil(
-                      loginRoute,
-                      (route) => false,
-                    );
+                    if (mounted) {
+                      Navigator.of(context).pushNamedAndRemoveUntil(
+                        loginRoute,
+                        (route) => false,
+                      );
+                    }
                   }
                   break;
               }
