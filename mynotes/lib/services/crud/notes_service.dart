@@ -6,7 +6,7 @@ class DatabaseUser {
   final int id;
   final String email;
 
-  DatabaseUser({
+  const DatabaseUser({
     required this.id,
     required this.email,
   });
