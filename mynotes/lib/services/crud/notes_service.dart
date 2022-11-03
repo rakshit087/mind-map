@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:sqflite/sqflite.dart';
 import 'package:path/path.dart' show join;
-import 'package:path_provider/path_provider.dart'
-    show getApplicationDocumentsDirectory;
+import 'package:path_provider/path_provider.dart';
 
+const dbName = "notes.db";
+const notesTable = "notes";
+const usersTable = "users";
 const idColumn = "id";
 const emailColumn = "email";
 const userIdColumn = "user_id";
@@ -60,3 +62,25 @@ class DatabaseNote {
   @override
   int get hashCode => id;
 }
+
+class NotesService {
+  Database? _db;
+
+  Future<void> open() async {
+    if (_db != null) {
+      throw DatabaseAlreadyOpenedException();
+    }
+    try {
+      final docsPath = await getApplicationDocumentsDirectory();
+      final dbPath = join(docsPath.path, dbName);
+      final db = await openDatabase(dbPath);
+      _db = db;
+    } on MissingPlatformDirectoryException {
+      throw UnableToGetDocumentsDirectory();
+    }
+  }
+}
+
+class UnableToGetDocumentsDirectory implements Exception {}
+
+class DatabaseAlreadyOpenedException implements Exception {}
