@@ -11,6 +11,23 @@ const emailColumn = "email";
 const userIdColumn = "user_id";
 const textColumn = "text";
 const isSyncedColumn = "is_synced";
+const createUserTableQuery = '''
+  CREATE TABLE IF NOT EXISTS "users" (
+    "id" INTEGER NOT NULL, 
+    "email" TEXT NOT NULL UNIQUE,
+    PRIMARY KEY("id" AUTO INCREMENT)
+  );
+''';
+const createNotesTableQuery = '''
+  CREATE TABLE IF NOT EXISTS "notes" (
+    "id" INTEGER NOT NULL,
+    "user_id" INTEGER NOT NULL,
+    "text" TEXT,
+    "is_synced" INTEGER NOT NULL DEFAULT 0,
+    PRIMARY KEY("id", AUTOINCREMENT)
+    FOREIGN KEY("user_id") REFERENCES "user"("id")
+  );
+''';
 
 @immutable
 class DatabaseUser {
@@ -75,6 +92,8 @@ class NotesService {
       final dbPath = join(docsPath.path, dbName);
       final db = await openDatabase(dbPath);
       _db = db;
+      await db.execute(createUserTableQuery);
+      await db.execute(createNotesTableQuery);
     } on MissingPlatformDirectoryException {
       throw UnableToGetDocumentsDirectory();
     }
