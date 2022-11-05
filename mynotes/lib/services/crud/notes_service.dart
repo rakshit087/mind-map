@@ -160,7 +160,47 @@ class NotesService {
     }
     return DatabaseUser.fromRow(result.first);
   }
+
+  Future<DatabaseNote> addNote({required DatabaseUser user}) async {
+    final db = _getDatabaseOrThrow();
+    final dbUser = await getUser(email: user.email);
+    if (user != dbUser) {
+      throw UserNotFoundException();
+    }
+    const text = '';
+    final noteId = await db.insert(notesTable, {
+      userIdColumn: user.id,
+      textColumn: text,
+      isSyncedColumn: 0,
+    });
+    final note = DatabaseNote(
+      id: noteId,
+      userId: user.id,
+      text: text,
+      isSynced: false,
+    );
+    return note;
+  }
+
+  Future<void> deleteNote({required int id}) async {
+    final db = _getDatabaseOrThrow();
+    final deletedAccount = await db.delete(
+      usersTable,
+      where: 'id = ?',
+      whereArgs: [id],
+    );
+    if (deletedAccount != 1) {
+      throw UnableToDeleteNote();
+    }
+  }
+
+  Future<int> deleteAllNotes() async {
+    final db = _getDatabaseOrThrow();
+    return await db.delete(notesTable);
+  }
 }
+
+class UnableToDeleteNote implements Exception {}
 
 class UserNotFoundException implements Exception {}
 
