@@ -11,6 +11,7 @@ const emailColumn = "email";
 const userIdColumn = "user_id";
 const textColumn = "text";
 const isSyncedColumn = "is_synced";
+
 const createUserTableQuery = '''
   CREATE TABLE IF NOT EXISTS "users" (
     "id" INTEGER NOT NULL, 
@@ -83,6 +84,15 @@ class DatabaseNote {
 class NotesService {
   Database? _db;
 
+  Future<void> close() async {
+    final db = _db;
+    if (db == null) {
+      throw DatabaseNotOpenedException();
+    }
+    await db.close();
+    _db = null;
+  }
+
   Future<void> open() async {
     if (_db != null) {
       throw DatabaseAlreadyOpenedException();
@@ -99,6 +109,8 @@ class NotesService {
     }
   }
 }
+
+class DatabaseNotOpenedException implements Exception {}
 
 class UnableToGetDocumentsDirectory implements Exception {}
 
