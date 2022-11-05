@@ -108,7 +108,32 @@ class NotesService {
       throw UnableToGetDocumentsDirectory();
     }
   }
+
+  Database _getDatabaseOrThrow() {
+    final db = _db;
+    if (db == null) {
+      throw DatabaseIsNotOpenException();
+    } else {
+      return db;
+    }
+  }
+
+  Future<void> deleteUser({required String email}) async {
+    final db = _getDatabaseOrThrow();
+    final deletedAccount = await db.delete(
+      usersTable,
+      where: 'email = ?',
+      whereArgs: [email.toLowerCase()],
+    );
+    if (deletedAccount != 1) {
+      throw UnableToDeleteUser();
+    }
+  }
 }
+
+class UnableToDeleteUser implements Exception {}
+
+class DatabaseIsNotOpenException implements Exception {}
 
 class DatabaseNotOpenedException implements Exception {}
 
