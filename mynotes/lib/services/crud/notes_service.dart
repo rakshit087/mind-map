@@ -198,7 +198,47 @@ class NotesService {
     final db = _getDatabaseOrThrow();
     return await db.delete(notesTable);
   }
+
+  Future<DatabaseNote> getNote({required int id}) async {
+    final db = _getDatabaseOrThrow();
+    final note = await db.query(
+      notesTable,
+      where: "id = ?",
+      whereArgs: [id],
+      limit: 1,
+    );
+    if (note.isEmpty) {
+      throw NoteDoesNotExistException();
+    }
+    return DatabaseNote.fromRow(note.first);
+  }
+
+  Future<Iterable<DatabaseNote>> getAllNotes() async {
+    final db = _getDatabaseOrThrow();
+    final rows = await db.query(notesTable);
+    return rows.map((row) => DatabaseNote.fromRow(row));
+  }
+
+  Future<DatabaseNote> updateNote({
+    required DatabaseNote note,
+    required String text,
+  }) async {
+    final db = _getDatabaseOrThrow();
+    await getNote(id: note.id);
+    final updateCount = await db.update(notesTable, {
+      textColumn: text,
+      isSyncedColumn: 0,
+    });
+    if (updateCount == 0) {
+      throw CouldNotUpdateException();
+    }
+    return await getNote(id: note.id);
+  }
 }
+
+class CouldNotUpdateException implements Exception {}
+
+class NoteDoesNotExistException implements Exception {}
 
 class UnableToDeleteNote implements Exception {}
 
