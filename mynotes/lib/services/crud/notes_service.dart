@@ -129,7 +129,42 @@ class NotesService {
       throw UnableToDeleteUser();
     }
   }
+
+  Future<DatabaseUser> addUser({required String email}) async {
+    final db = _getDatabaseOrThrow();
+    final result = await db.query(
+      usersTable,
+      limit: 1,
+      where: "email = ?",
+      whereArgs: [email.toLowerCase()],
+    );
+    if (result.isNotEmpty) {
+      throw UserAlreadyExists();
+    }
+    final userId = await db.insert(usersTable, {
+      emailColumn: email.toLowerCase(),
+    });
+    return DatabaseUser(id: userId, email: email);
+  }
+
+  Future<DatabaseUser> getUser({required String email}) async {
+    final db = _getDatabaseOrThrow();
+    final result = await db.query(
+      usersTable,
+      limit: 1,
+      where: "email = ?",
+      whereArgs: [email.toLowerCase()],
+    );
+    if (result.isEmpty) {
+      throw UserNotFoundException();
+    }
+    return DatabaseUser.fromRow(result.first);
+  }
 }
+
+class UserNotFoundException implements Exception {}
+
+class UserAlreadyExists implements Exception {}
 
 class UnableToDeleteUser implements Exception {}
 
