@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "933505670343",
+    "project_id": "rkade-mynotes",
+    "storage_bucket": "rkade-mynotes.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:933505670343:android:0ca7189c79894fed5232e2",
+        "android_client_info": {
+          "package_name": "eth.rakshitarora.mynotes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "933505670343-fm7ovgba7uc7btkvq4nrkdfcumduuv0v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBp0p9BovGXEt0dPmExAFvq8FMIZ5nH8ig"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "933505670343-fm7ovgba7uc7btkvq4nrkdfcumduuv0v.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "933505670343-c3nhkrev5t1jf8t37h7mnr8v2amkejto.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "eth.rakshitarora.mynotes"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
