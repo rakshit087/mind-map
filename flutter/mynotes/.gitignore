@@ -45,3 +45,7 @@ app.*.map.json
 
 #MacOS related
 .DS_Store
+
+#Android and iOS
+android
+ios
