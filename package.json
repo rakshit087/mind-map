@@ -1,6 +1,9 @@
 {
   "name": "backend",
   "packageManager": "yarn@3.3.0",
+  "scripts": {
+    "dev": "ts-node-dev --respawn --transpile-only src/app.ts"
+  },
   "dependencies": {
     "bcrypt": "^5.1.0",
     "config": "^3.3.9",
