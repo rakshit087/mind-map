@@ -1,3 +1,5 @@
+// logger to properly format logs for console
+
 import logger from "pino";
 import dayjs from "dayjs";
 
