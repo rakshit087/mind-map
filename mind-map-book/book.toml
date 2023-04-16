@@ -1,0 +1,6 @@
+[book]
+authors = ["Rakshit Arora"]
+language = "en"
+multilingual = false
+src = "src"
+title = "mind-map-book"
