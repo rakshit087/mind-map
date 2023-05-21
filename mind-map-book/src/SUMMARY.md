@@ -7,5 +7,6 @@
 - [Rust](rust/README.md)
     - [Hello Rust](rust/01_hellorust.md)
     - [Common Concepts 1](rust/02_commonconcepts.md)
+    - [Common Concepts 2](rust/03_commonconcepts.md)
     - [Panic Macro](rust/16_panic.md)
     - [Result Enum](rust/17_result.md)
