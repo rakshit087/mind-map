@@ -5,8 +5,10 @@
     - [C++ Architecture](dsa/02_architecture.md)
 
 - [🦀 Rust](rust/README.md)
-    - [Hello Rust](rust/01_hellorust.md)
-    - [Common Concepts 1](rust/02_commonconcepts.md)
-    - [Common Concepts 2](rust/03_commonconcepts.md)
+    - [Basics](rust/basics/README.md)
+        - [Hello Rust](rust/basics/01_hellorust.md)
+        - [Common Concepts 1](rust/basics/02_commonconcepts.md)
+        - [Common Concepts 2](rust/basics/03_commonconcepts.md)
+        - [Control Flow](rust/basics/04_control_flow.md)
     - [Panic Macro](rust/16_panic.md)
     - [Result Enum](rust/17_result.md)
