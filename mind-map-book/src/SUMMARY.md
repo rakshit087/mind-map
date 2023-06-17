@@ -10,5 +10,7 @@
         - [Common Concepts 1](rust/basics/02_commonconcepts.md)
         - [Common Concepts 2](rust/basics/03_commonconcepts.md)
         - [Control Flow](rust/basics/04_control_flow.md)
+    - [Ownership](rust/ownership/README.md)
+        - [Different Memories](rust/ownership/05_diff_mem.md)
     - [Panic Macro](rust/16_panic.md)
     - [Result Enum](rust/17_result.md)
