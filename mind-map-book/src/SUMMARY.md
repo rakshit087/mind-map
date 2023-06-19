@@ -13,5 +13,6 @@
     - [Ownership](rust/ownership/README.md)
         - [Different Memories](rust/ownership/05_diff_mem.md)
         - [What is Ownership](rust/ownership/06_what_is.md)
+        - [Ownership in Functions](rust/ownership/07_in_functions.md)
     - [Panic Macro](rust/16_panic.md)
     - [Result Enum](rust/17_result.md)
