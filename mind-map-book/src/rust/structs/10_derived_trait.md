@@ -1,6 +1,6 @@
 # Printing with Derived Traits
 
-```jsx
+```rust
 #[derive(Debug)]
 struct Rectangle {
     width: u32,

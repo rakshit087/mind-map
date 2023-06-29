@@ -1,6 +1,6 @@
 # Methods in Structs
 
-```jsx
+```rust
 #[derive(Debug)]
 struct Rectangle {
     width: u32,
