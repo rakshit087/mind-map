@@ -2,7 +2,7 @@
 
 Enums gives us a way of saying a value is one of a possible set of values.
 
-```jsx
+```rust
 enum IpAddrKind {
     V4,
     V6,
@@ -46,6 +46,6 @@ impl Message {
         }
     }
 
-    let m = Message::Write(String::from("hello"));
-    m.call();
+let m = Message::Write(String::from("hello"));
+m.call();
 ```
