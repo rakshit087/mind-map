@@ -24,11 +24,11 @@ fn value_in_cents(coin: Coin) -> u8 {
 
 ```rust
 fn plus_one(x: Option<i32>) -> Option<i32> { //The plus one takes in an Option enum, ie value can be None
-        match x {
-            None => None,
-            Some(i) => Some(i + 1), //If value is not null, return value+1
-        }
+    match x {
+        None => None,
+        Some(i) => Some(i + 1), //If value is not null, return value+1
     }
+}
 ```
 
 # Exhaustive Property
