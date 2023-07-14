@@ -12,3 +12,8 @@
 - [Ownership in Functions](ownership/07_in_functions.md)
 - [Passing values by Reference](ownership/08_reference.md)
 - [Slices](ownership/08_slices.md)
+
+`Structs`
+- [Defining Structs](structs/09_defining.md)
+- [Printing with Derived Traits](structs/10_derived_trait.md)
+- [Methods in Structs](structs/11_methods.md)
