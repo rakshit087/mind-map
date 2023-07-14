@@ -17,3 +17,8 @@
 - [Defining Structs](structs/09_defining.md)
 - [Printing with Derived Traits](structs/10_derived_trait.md)
 - [Methods in Structs](structs/11_methods.md)
+
+`Enums`
+- [Defining Enums](enums/12_defining.md)
+- [Option Enum](enums/13_option.md)
+- [match Statement](enums/14_match.md)
