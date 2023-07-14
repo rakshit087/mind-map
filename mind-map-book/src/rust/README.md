@@ -8,3 +8,7 @@
 
 `Ownership in Rust`
 - [Different Memories](ownership/05_diff_mem.md)
+- [What is Ownership](ownership/06_what_is.md)
+- [Ownership in Functions](ownership/07_in_functions.md)
+- [Passing values by Reference](ownership/08_reference.md)
+- [Slices](ownership/08_slices.md)
