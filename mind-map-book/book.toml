@@ -4,3 +4,7 @@ language = "en"
 multilingual = false
 src = "src"
 title = "🧠 Mind Map"
+
+[output.html.fold]
+enable = true    
+level = 0
