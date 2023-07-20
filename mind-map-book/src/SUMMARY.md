@@ -28,5 +28,6 @@
         - [Vectors](rust/com_collections/15_vectors.md)
         - [Strings](rust/com_collections/16_strings.md)
         - [Hash Maps](rust/com_collections/17_hash_maps.md)
-    - [Panic Macro](rust/16_panic.md)
-    - [Result Enum](rust/17_result.md)
+    - [Error Handling](rust/error_handling/README.md)
+        - [panic!](rust/error_handling/18_panic.md)
+        - [Result](rust/error_handling/19_result.md)
