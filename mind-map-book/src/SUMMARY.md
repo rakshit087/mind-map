@@ -1,9 +1,10 @@
 # Summary
 
 - [💻 Data Structures and Algorithms](dsa/README.md)
-    - [Into to Programming](dsa/01_intro_to_programming.md)
-    - [C++ Architecture](dsa/02_architecture.md)
-
+    - [Basics](dsa/basics/README.md)
+        - [Into to Programming](dsa/basics/01_intro_to_programming.md)
+        - [C++ Architecture](dsa/basics/02_architecture.md)
+    
 - [🦀 Rust](rust/README.md)
     - [Basics](rust/basics/README.md)
         - [Hello Rust](rust/basics/01_hellorust.md)
