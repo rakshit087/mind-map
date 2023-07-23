@@ -4,6 +4,9 @@
     - [Basics](dsa/basics/README.md)
         - [Into to Programming](dsa/basics/01_intro_to_programming.md)
         - [C++ Architecture](dsa/basics/02_architecture.md)
+        - [Hello World](dsa/basics/03_hello_world.md)
+        - [Variables and Data Types](dsa/basics/04_variables.md)
+        - [Pointers](dsa/basics/05_pointers.md)
     
 - [🦀 Rust](rust/README.md)
     - [Basics](rust/basics/README.md)
