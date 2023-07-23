@@ -28,7 +28,7 @@ C++ also has several derived data types:
 
 To declare a variable in C++, you need to specify the data type and give it a name. Here are some examples:
 
-```
+```cpp
 int age;
 double price;
 char grade;
@@ -38,7 +38,7 @@ bool is_valid;
 
 You can also initialize a variable when you declare it:
 
-```
+```cpp
 int age = 30;
 double price = 19.99;
 char grade = 'A';
@@ -50,7 +50,7 @@ bool is_valid = true;
 
 ### Example 1: Adding Two Numbers
 
-```
+```cpp
 #include <iostream>
 
 using namespace std;
@@ -72,7 +72,7 @@ int main() {
 
 ### Example 2: Finding the Maximum of Two Numbers
 
-```
+```cpp
 #include <iostream>
 
 using namespace std;
@@ -91,7 +91,3 @@ int main() {
 }
 
 ```
-
-## Conclusion
-
-In this document, we discussed the different data types in C++ and how to declare variables. We also provided some code snippets to demonstrate how to use variables and data types in C++.
