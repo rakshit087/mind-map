@@ -7,6 +7,10 @@
         - [Hello World](dsa/basics/03_hello_world.md)
         - [Variables and Data Types](dsa/basics/04_variables.md)
         - [Pointers](dsa/basics/05_pointers.md)
+    - [OOPs](dsa/oops/README.md)
+        - [Classes and Objects](dsa/oops/06_classes.md)
+        - [Access Modifiers](dsa/oops/07_access_modifiers.md)
+        - [Constructors](dsa/oops/08_constructors.md)
     
 - [🦀 Rust](rust/README.md)
     - [Basics](rust/basics/README.md)
