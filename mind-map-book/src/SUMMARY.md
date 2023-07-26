@@ -11,6 +11,9 @@
         - [Classes and Objects](dsa/oops/06_classes.md)
         - [Access Modifiers](dsa/oops/07_access_modifiers.md)
         - [Constructors](dsa/oops/08_constructors.md)
+    - [STL](dsa/stl/README.md)
+        - [Vectors](dsa/stl/09_vectors.md)
+        - [Hash Maps](dsa/stl/10_hash_maps.md)
     
 - [🦀 Rust](rust/README.md)
     - [Basics](rust/basics/README.md)
