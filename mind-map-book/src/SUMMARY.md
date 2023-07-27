@@ -15,6 +15,14 @@
         - [Vectors](dsa/stl/09_vectors.md)
         - [Hash Maps](dsa/stl/10_hash_maps.md)
 
+- [↘️ Git and Github](git/README.md)
+    - [Basics](git/01_basics.md)
+    - [Navigating](git/02_navigating.md)
+    - [Stashing](git/03_stashing.md)
+    - [Branching](git/04_branching.md)
+    - [Merging](git/05_merging.md)
+    - [Github](git/05_github.md)
+
 - [💉 SQL](sql/README.md)
     - [Basics of MySQL](sql/01_basics.md)
     - [Altering Tables](sql/02_altering_tables.md)
