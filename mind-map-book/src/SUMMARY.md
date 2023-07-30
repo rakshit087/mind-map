@@ -23,6 +23,8 @@
     - [Merging](git/05_merging.md)
     - [Github](git/05_github.md)
 
+- [Vim](vim/README.md)
+
 - [💉 SQL](sql/README.md)
     - [Basics of MySQL](sql/01_basics.md)
     - [Altering Tables](sql/02_altering_tables.md)
