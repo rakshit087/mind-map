@@ -83,3 +83,4 @@ Wayder_API_Express\node_modules\
 !.gitignore
 !.editorconfig
 !.phpcs.xml.dist
+!.github
