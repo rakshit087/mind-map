@@ -445,10 +445,14 @@ ul#searchresults span.teaser em {
 
 .chapter li a:hover {
     color: var(--sidebar-active);
+    text-decoration: var(--sidebar-active-decoration);
+    font-weight: bold;
 }
 
 .chapter li a.active {
     color: var(--sidebar-active);
+    text-decoration: var(--sidebar-active-decoration);
+    font-weight: bold;
 }
 
 .chapter li > a.toggle {
@@ -458,6 +462,7 @@ ul#searchresults span.teaser em {
     padding: 0 10px;
     user-select: none;
     opacity: 0.68;
+    text-decoration: none;
 }
 
 .chapter li > a.toggle div {
@@ -471,7 +476,7 @@ ul#searchresults span.teaser em {
 
 .chapter li.chapter-item {
     line-height: 1.5em;
-    margin-top: 0.6em;
+    margin-top: 1em;
 }
 
 .chapter li.expanded > a.toggle div {
