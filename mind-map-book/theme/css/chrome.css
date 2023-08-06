@@ -170,7 +170,7 @@ a > .hljs {
     text-decoration: none;
     width: 90px;
     border-radius: 5px;
-    background-color: var(--sidebar-bg);
+    background: var(--sidebar-bg);
 }
 
 .previous {
@@ -366,7 +366,7 @@ ul#searchresults span.teaser em {
     box-sizing: border-box;
     -webkit-overflow-scrolling: touch;
     overscroll-behavior-y: contain;
-    background-color: var(--sidebar-bg);
+    background: var(--sidebar-bg);
     color: var(--sidebar-fg);
 }
 .sidebar-resizing {
