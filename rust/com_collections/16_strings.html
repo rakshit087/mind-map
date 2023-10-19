@@ -1,0 +1,222 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Strings - 🧠 Mind Map</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = null;
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item "><a href="../../index.html"><strong aria-hidden="true">1.</strong> 🏠 Where am I?</a></li><li class="chapter-item "><a href="../../dsa/index.html"><strong aria-hidden="true">2.</strong> 💻 Data Structures and Algorithms</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../dsa/basics/index.html"><strong aria-hidden="true">2.1.</strong> Basics</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../dsa/basics/01_intro_to_programming.html"><strong aria-hidden="true">2.1.1.</strong> Into to Programming</a></li><li class="chapter-item "><a href="../../dsa/basics/02_architecture.html"><strong aria-hidden="true">2.1.2.</strong> C++ Architecture</a></li><li class="chapter-item "><a href="../../dsa/basics/03_hello_world.html"><strong aria-hidden="true">2.1.3.</strong> Hello World</a></li><li class="chapter-item "><a href="../../dsa/basics/04_variables.html"><strong aria-hidden="true">2.1.4.</strong> Variables and Data Types</a></li><li class="chapter-item "><a href="../../dsa/basics/05_pointers.html"><strong aria-hidden="true">2.1.5.</strong> Pointers</a></li></ol></li><li class="chapter-item "><a href="../../dsa/oops/index.html"><strong aria-hidden="true">2.2.</strong> OOPs</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../dsa/oops/06_classes.html"><strong aria-hidden="true">2.2.1.</strong> Classes and Objects</a></li><li class="chapter-item "><a href="../../dsa/oops/07_access_modifiers.html"><strong aria-hidden="true">2.2.2.</strong> Access Modifiers</a></li><li class="chapter-item "><a href="../../dsa/oops/08_constructors.html"><strong aria-hidden="true">2.2.3.</strong> Constructors</a></li></ol></li><li class="chapter-item "><a href="../../dsa/stl/index.html"><strong aria-hidden="true">2.3.</strong> STL</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../dsa/stl/09_vectors.html"><strong aria-hidden="true">2.3.1.</strong> Vectors</a></li><li class="chapter-item "><a href="../../dsa/stl/10_hash_maps.html"><strong aria-hidden="true">2.3.2.</strong> Hash Maps</a></li></ol></li></ol></li><li class="chapter-item "><a href="../../git/index.html"><strong aria-hidden="true">3.</strong> ↘️ Git and Github</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../git/01_basics.html"><strong aria-hidden="true">3.1.</strong> Basics</a></li><li class="chapter-item "><a href="../../git/02_navigating.html"><strong aria-hidden="true">3.2.</strong> Navigating</a></li><li class="chapter-item "><a href="../../git/03_stashing.html"><strong aria-hidden="true">3.3.</strong> Stashing</a></li><li class="chapter-item "><a href="../../git/04_branching.html"><strong aria-hidden="true">3.4.</strong> Branching</a></li><li class="chapter-item "><a href="../../git/05_merging.html"><strong aria-hidden="true">3.5.</strong> Merging</a></li><li class="chapter-item "><a href="../../git/05_github.html"><strong aria-hidden="true">3.6.</strong> Github</a></li></ol></li><li class="chapter-item "><a href="../../vim/index.html"><strong aria-hidden="true">4.</strong> 📗 Vim</a></li><li class="chapter-item "><a href="../../sql/index.html"><strong aria-hidden="true">5.</strong> 💉 SQL</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../sql/01_basics.html"><strong aria-hidden="true">5.1.</strong> Basics of MySQL</a></li><li class="chapter-item "><a href="../../sql/02_altering_tables.html"><strong aria-hidden="true">5.2.</strong> Altering Tables</a></li><li class="chapter-item "><a href="../../sql/03_writing_queries.html"><strong aria-hidden="true">5.3.</strong> Writing Queries</a></li><li class="chapter-item "><a href="../../sql/04_constraints.html"><strong aria-hidden="true">5.4.</strong> Constraints</a></li><li class="chapter-item "><a href="../../sql/05_advanced_queries.html"><strong aria-hidden="true">5.5.</strong> Advanced Queries</a></li><li class="chapter-item "><a href="../../sql/06_aggregate_functions.html"><strong aria-hidden="true">5.6.</strong> Aggregate Functions</a></li><li class="chapter-item "><a href="../../sql/07_grouping_data.html"><strong aria-hidden="true">5.7.</strong> Grouping Data</a></li><li class="chapter-item "><a href="../../sql/08_sub_queries.html"><strong aria-hidden="true">5.8.</strong> Sub Queries</a></li><li class="chapter-item "><a href="../../sql/09_joins.html"><strong aria-hidden="true">5.9.</strong> Joins</a></li><li class="chapter-item "><a href="../../sql/10_strings_date_time.html"><strong aria-hidden="true">5.10.</strong> Strings, Date and Time</a></li><li class="chapter-item "><a href="../../sql/11_case_statements.html"><strong aria-hidden="true">5.11.</strong> Case Statements</a></li><li class="chapter-item "><a href="../../sql/12_views.html"><strong aria-hidden="true">5.12.</strong> Views</a></li><li class="chapter-item "><a href="../../sql/13_pivoting_data.html"><strong aria-hidden="true">5.13.</strong> Pivoting Data</a></li><li class="chapter-item "><a href="../../sql/14_variables.html"><strong aria-hidden="true">5.14.</strong> Variables</a></li></ol></li><li class="chapter-item "><a href="../../docker/REAME.html"><strong aria-hidden="true">6.</strong> 🐳 Docker</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../docker/01_what_are_containers.html"><strong aria-hidden="true">6.1.</strong> What are containers</a></li><li class="chapter-item "><a href="../../docker/02_docker_basics.html"><strong aria-hidden="true">6.2.</strong> Docker Basics</a></li><li class="chapter-item "><a href="../../docker/03_ports.html"><strong aria-hidden="true">6.3.</strong> Ports and Volumes</a></li><li class="chapter-item "><a href="../../docker/04_docker_compose.html"><strong aria-hidden="true">6.4.</strong> Docker Compose</a></li><li class="chapter-item "><a href="../../docker/05_creating_images.html"><strong aria-hidden="true">6.5.</strong> Creating Docker Images</a></li></ol></li><li class="chapter-item expanded "><a href="../../rust/index.html"><strong aria-hidden="true">7.</strong> 🦀 Rust</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../rust/basics/index.html"><strong aria-hidden="true">7.1.</strong> Basics</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../rust/basics/01_hellorust.html"><strong aria-hidden="true">7.1.1.</strong> Hello Rust</a></li><li class="chapter-item "><a href="../../rust/basics/02_commonconcepts.html"><strong aria-hidden="true">7.1.2.</strong> Common Concepts 1</a></li><li class="chapter-item "><a href="../../rust/basics/03_commonconcepts.html"><strong aria-hidden="true">7.1.3.</strong> Common Concepts 2</a></li><li class="chapter-item "><a href="../../rust/basics/04_control_flow.html"><strong aria-hidden="true">7.1.4.</strong> Control Flow</a></li></ol></li><li class="chapter-item "><a href="../../rust/ownership/index.html"><strong aria-hidden="true">7.2.</strong> Ownership</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../rust/ownership/05_diff_mem.html"><strong aria-hidden="true">7.2.1.</strong> Different Memories</a></li><li class="chapter-item "><a href="../../rust/ownership/06_what_is.html"><strong aria-hidden="true">7.2.2.</strong> What is Ownership</a></li><li class="chapter-item "><a href="../../rust/ownership/07_in_functions.html"><strong aria-hidden="true">7.2.3.</strong> Ownership in Functions</a></li><li class="chapter-item "><a href="../../rust/ownership/08_reference.html"><strong aria-hidden="true">7.2.4.</strong> Passing values by Reference</a></li><li class="chapter-item "><a href="../../rust/ownership/08_slices.html"><strong aria-hidden="true">7.2.5.</strong> Slices</a></li></ol></li><li class="chapter-item "><a href="../../rust/structs/index.html"><strong aria-hidden="true">7.3.</strong> Structs</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../rust/structs/09_defining.html"><strong aria-hidden="true">7.3.1.</strong> Defining Structs</a></li><li class="chapter-item "><a href="../../rust/structs/10_derived_trait.html"><strong aria-hidden="true">7.3.2.</strong> Printing with Derived Traits</a></li><li class="chapter-item "><a href="../../rust/structs/11_methods.html"><strong aria-hidden="true">7.3.3.</strong> Methods in Structs</a></li></ol></li><li class="chapter-item "><a href="../../rust/enums/index.html"><strong aria-hidden="true">7.4.</strong> Enums</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../rust/enums/12_defining.html"><strong aria-hidden="true">7.4.1.</strong> Defining Enums</a></li><li class="chapter-item "><a href="../../rust/enums/13_option.html"><strong aria-hidden="true">7.4.2.</strong> Option Enum</a></li><li class="chapter-item "><a href="../../rust/enums/14_match.html"><strong aria-hidden="true">7.4.3.</strong> match Statement</a></li></ol></li><li class="chapter-item expanded "><a href="../../rust/com_collections/index.html"><strong aria-hidden="true">7.5.</strong> Common Collections</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../rust/com_collections/15_vectors.html"><strong aria-hidden="true">7.5.1.</strong> Vectors</a></li><li class="chapter-item expanded "><a href="../../rust/com_collections/16_strings.html" class="active"><strong aria-hidden="true">7.5.2.</strong> Strings</a></li><li class="chapter-item "><a href="../../rust/com_collections/17_hash_maps.html"><strong aria-hidden="true">7.5.3.</strong> Hash Maps</a></li></ol></li><li class="chapter-item "><a href="../../rust/error_handling/index.html"><strong aria-hidden="true">7.6.</strong> Error Handling</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../rust/error_handling/18_panic.html"><strong aria-hidden="true">7.6.1.</strong> panic!</a></li><li class="chapter-item "><a href="../../rust/error_handling/19_result.html"><strong aria-hidden="true">7.6.2.</strong> Result</a></li></ol></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="rkade">RKade</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">🧠 Mind Map</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="strings"><a class="header" href="#strings">Strings</a></h1>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../rust/com_collections/15_vectors.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../../rust/com_collections/17_hash_maps.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../rust/com_collections/15_vectors.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../../rust/com_collections/17_hash_maps.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../../elasticlunr.min.js"></script>
+        <script src="../../mark.min.js"></script>
+        <script src="../../searcher.js"></script>
+
+        <script src="../../clipboard.min.js"></script>
+        <script src="../../highlight.js"></script>
+        <script src="../../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

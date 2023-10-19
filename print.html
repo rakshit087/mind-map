@@ -1,0 +1,1889 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>🧠 Mind Map</title>
+        <meta name="robots" content="noindex" />
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = null;
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item "><a href="index.html"><strong aria-hidden="true">1.</strong> 🏠 Where am I?</a></li><li class="chapter-item "><a href="dsa/index.html"><strong aria-hidden="true">2.</strong> 💻 Data Structures and Algorithms</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="dsa/basics/index.html"><strong aria-hidden="true">2.1.</strong> Basics</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="dsa/basics/01_intro_to_programming.html"><strong aria-hidden="true">2.1.1.</strong> Into to Programming</a></li><li class="chapter-item "><a href="dsa/basics/02_architecture.html"><strong aria-hidden="true">2.1.2.</strong> C++ Architecture</a></li><li class="chapter-item "><a href="dsa/basics/03_hello_world.html"><strong aria-hidden="true">2.1.3.</strong> Hello World</a></li><li class="chapter-item "><a href="dsa/basics/04_variables.html"><strong aria-hidden="true">2.1.4.</strong> Variables and Data Types</a></li><li class="chapter-item "><a href="dsa/basics/05_pointers.html"><strong aria-hidden="true">2.1.5.</strong> Pointers</a></li></ol></li><li class="chapter-item "><a href="dsa/oops/index.html"><strong aria-hidden="true">2.2.</strong> OOPs</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="dsa/oops/06_classes.html"><strong aria-hidden="true">2.2.1.</strong> Classes and Objects</a></li><li class="chapter-item "><a href="dsa/oops/07_access_modifiers.html"><strong aria-hidden="true">2.2.2.</strong> Access Modifiers</a></li><li class="chapter-item "><a href="dsa/oops/08_constructors.html"><strong aria-hidden="true">2.2.3.</strong> Constructors</a></li></ol></li><li class="chapter-item "><a href="dsa/stl/index.html"><strong aria-hidden="true">2.3.</strong> STL</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="dsa/stl/09_vectors.html"><strong aria-hidden="true">2.3.1.</strong> Vectors</a></li><li class="chapter-item "><a href="dsa/stl/10_hash_maps.html"><strong aria-hidden="true">2.3.2.</strong> Hash Maps</a></li></ol></li></ol></li><li class="chapter-item "><a href="git/index.html"><strong aria-hidden="true">3.</strong> ↘️ Git and Github</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="git/01_basics.html"><strong aria-hidden="true">3.1.</strong> Basics</a></li><li class="chapter-item "><a href="git/02_navigating.html"><strong aria-hidden="true">3.2.</strong> Navigating</a></li><li class="chapter-item "><a href="git/03_stashing.html"><strong aria-hidden="true">3.3.</strong> Stashing</a></li><li class="chapter-item "><a href="git/04_branching.html"><strong aria-hidden="true">3.4.</strong> Branching</a></li><li class="chapter-item "><a href="git/05_merging.html"><strong aria-hidden="true">3.5.</strong> Merging</a></li><li class="chapter-item "><a href="git/05_github.html"><strong aria-hidden="true">3.6.</strong> Github</a></li></ol></li><li class="chapter-item "><a href="vim/index.html"><strong aria-hidden="true">4.</strong> 📗 Vim</a></li><li class="chapter-item "><a href="sql/index.html"><strong aria-hidden="true">5.</strong> 💉 SQL</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="sql/01_basics.html"><strong aria-hidden="true">5.1.</strong> Basics of MySQL</a></li><li class="chapter-item "><a href="sql/02_altering_tables.html"><strong aria-hidden="true">5.2.</strong> Altering Tables</a></li><li class="chapter-item "><a href="sql/03_writing_queries.html"><strong aria-hidden="true">5.3.</strong> Writing Queries</a></li><li class="chapter-item "><a href="sql/04_constraints.html"><strong aria-hidden="true">5.4.</strong> Constraints</a></li><li class="chapter-item "><a href="sql/05_advanced_queries.html"><strong aria-hidden="true">5.5.</strong> Advanced Queries</a></li><li class="chapter-item "><a href="sql/06_aggregate_functions.html"><strong aria-hidden="true">5.6.</strong> Aggregate Functions</a></li><li class="chapter-item "><a href="sql/07_grouping_data.html"><strong aria-hidden="true">5.7.</strong> Grouping Data</a></li><li class="chapter-item "><a href="sql/08_sub_queries.html"><strong aria-hidden="true">5.8.</strong> Sub Queries</a></li><li class="chapter-item "><a href="sql/09_joins.html"><strong aria-hidden="true">5.9.</strong> Joins</a></li><li class="chapter-item "><a href="sql/10_strings_date_time.html"><strong aria-hidden="true">5.10.</strong> Strings, Date and Time</a></li><li class="chapter-item "><a href="sql/11_case_statements.html"><strong aria-hidden="true">5.11.</strong> Case Statements</a></li><li class="chapter-item "><a href="sql/12_views.html"><strong aria-hidden="true">5.12.</strong> Views</a></li><li class="chapter-item "><a href="sql/13_pivoting_data.html"><strong aria-hidden="true">5.13.</strong> Pivoting Data</a></li><li class="chapter-item "><a href="sql/14_variables.html"><strong aria-hidden="true">5.14.</strong> Variables</a></li></ol></li><li class="chapter-item "><a href="docker/REAME.html"><strong aria-hidden="true">6.</strong> 🐳 Docker</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="docker/01_what_are_containers.html"><strong aria-hidden="true">6.1.</strong> What are containers</a></li><li class="chapter-item "><a href="docker/02_docker_basics.html"><strong aria-hidden="true">6.2.</strong> Docker Basics</a></li><li class="chapter-item "><a href="docker/03_ports.html"><strong aria-hidden="true">6.3.</strong> Ports and Volumes</a></li><li class="chapter-item "><a href="docker/04_docker_compose.html"><strong aria-hidden="true">6.4.</strong> Docker Compose</a></li><li class="chapter-item "><a href="docker/05_creating_images.html"><strong aria-hidden="true">6.5.</strong> Creating Docker Images</a></li></ol></li><li class="chapter-item "><a href="rust/index.html"><strong aria-hidden="true">7.</strong> 🦀 Rust</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="rust/basics/index.html"><strong aria-hidden="true">7.1.</strong> Basics</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="rust/basics/01_hellorust.html"><strong aria-hidden="true">7.1.1.</strong> Hello Rust</a></li><li class="chapter-item "><a href="rust/basics/02_commonconcepts.html"><strong aria-hidden="true">7.1.2.</strong> Common Concepts 1</a></li><li class="chapter-item "><a href="rust/basics/03_commonconcepts.html"><strong aria-hidden="true">7.1.3.</strong> Common Concepts 2</a></li><li class="chapter-item "><a href="rust/basics/04_control_flow.html"><strong aria-hidden="true">7.1.4.</strong> Control Flow</a></li></ol></li><li class="chapter-item "><a href="rust/ownership/index.html"><strong aria-hidden="true">7.2.</strong> Ownership</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="rust/ownership/05_diff_mem.html"><strong aria-hidden="true">7.2.1.</strong> Different Memories</a></li><li class="chapter-item "><a href="rust/ownership/06_what_is.html"><strong aria-hidden="true">7.2.2.</strong> What is Ownership</a></li><li class="chapter-item "><a href="rust/ownership/07_in_functions.html"><strong aria-hidden="true">7.2.3.</strong> Ownership in Functions</a></li><li class="chapter-item "><a href="rust/ownership/08_reference.html"><strong aria-hidden="true">7.2.4.</strong> Passing values by Reference</a></li><li class="chapter-item "><a href="rust/ownership/08_slices.html"><strong aria-hidden="true">7.2.5.</strong> Slices</a></li></ol></li><li class="chapter-item "><a href="rust/structs/index.html"><strong aria-hidden="true">7.3.</strong> Structs</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="rust/structs/09_defining.html"><strong aria-hidden="true">7.3.1.</strong> Defining Structs</a></li><li class="chapter-item "><a href="rust/structs/10_derived_trait.html"><strong aria-hidden="true">7.3.2.</strong> Printing with Derived Traits</a></li><li class="chapter-item "><a href="rust/structs/11_methods.html"><strong aria-hidden="true">7.3.3.</strong> Methods in Structs</a></li></ol></li><li class="chapter-item "><a href="rust/enums/index.html"><strong aria-hidden="true">7.4.</strong> Enums</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="rust/enums/12_defining.html"><strong aria-hidden="true">7.4.1.</strong> Defining Enums</a></li><li class="chapter-item "><a href="rust/enums/13_option.html"><strong aria-hidden="true">7.4.2.</strong> Option Enum</a></li><li class="chapter-item "><a href="rust/enums/14_match.html"><strong aria-hidden="true">7.4.3.</strong> match Statement</a></li></ol></li><li class="chapter-item "><a href="rust/com_collections/index.html"><strong aria-hidden="true">7.5.</strong> Common Collections</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="rust/com_collections/15_vectors.html"><strong aria-hidden="true">7.5.1.</strong> Vectors</a></li><li class="chapter-item "><a href="rust/com_collections/16_strings.html"><strong aria-hidden="true">7.5.2.</strong> Strings</a></li><li class="chapter-item "><a href="rust/com_collections/17_hash_maps.html"><strong aria-hidden="true">7.5.3.</strong> Hash Maps</a></li></ol></li><li class="chapter-item "><a href="rust/error_handling/index.html"><strong aria-hidden="true">7.6.</strong> Error Handling</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="rust/error_handling/18_panic.html"><strong aria-hidden="true">7.6.1.</strong> panic!</a></li><li class="chapter-item "><a href="rust/error_handling/19_result.html"><strong aria-hidden="true">7.6.2.</strong> Result</a></li></ol></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="rkade">RKade</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">🧠 Mind Map</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="where-am-i"><a class="header" href="#where-am-i">Where am I?</a></h1>
+<p>I had a bunch of 'learning' repos that I created while learning that tech and an insane amount of scattered and unorganised Notion Notes. So I decided to work on this repository to kind of merge everything here.</p>
+<div style="break-before: page; page-break-before: always;"></div><p><code>Intro to C++</code></p>
+<ul>
+<li><a href="dsa/01_intro_to_programming.html">Intro to Programming</a></li>
+<li><a href="dsa/02_architecture.html">C++ Architecture</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="basics"><a class="header" href="#basics">Basics</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><p><em>Programming</em> is a way to instruct the computer to perform various task.</p>
+<h2 id="types-of-programming-languages"><a class="header" href="#types-of-programming-languages">Types of Programming Languages</a></h2>
+<p>There are various kind of programming languages, but they can be broadly classified into three types</p>
+<h3 id="procedural-programming-languages"><a class="header" href="#procedural-programming-languages"><code>Procedural Programming Languages</code></a></h3>
+<p>A procedural language is a computer programming language that follows, in order, a set of commands.</p>
+<p>Examples of computer procedural languages are BASIC, C, FORTRAN</p>
+<p>Procedural languages are some of the common types of programming languages used by script and software programmers. They make use of functions, conditional statements, and variables to create programs that allow a computer to calculate and display a desired output.</p>
+<h3 id="functional-programming-language"><a class="header" href="#functional-programming-language"><code>Functional Programming Language</code></a></h3>
+<p>Functional programming languages are specially designed to handle symbolic computation and list processing applications. Functional programming is based on mathematical functions. Some of the popular functional programming languages include: Lisp, Python, Erlang, Haskell, Clojure, etc.</p>
+<p>Writing a program only in pure functions i.e., never modify variables but
+only create new ones as an output.</p>
+<p>Used in a situation where we have to perform lots of different
+operations on the same set of data like ML.</p>
+<h3 id="object-oriented-languages"><a class="header" href="#object-oriented-languages"><code>Object Oriented Languages</code></a></h3>
+<p>Object-oriented programming (OOP) is a programming paradigm based on the concept of &quot;objects&quot;, which can contain data and code: data in the form of fields (often known as attributes or properties), and code, in the form of procedures (often known as methods).</p>
+<p>NOTE: “One programming language can be of all 3 types like- Python”</p>
+<h3 id="static-vs-dynamic-languages"><a class="header" href="#static-vs-dynamic-languages">Static vs Dynamic Languages</a></h3>
+<p><code>Static Type</code></p>
+<ul>
+<li>Perform type checking at compile time</li>
+<li>Errors will show at compile time</li>
+<li>Declare datatypes before use</li>
+<li>More control</li>
+<li>Example: Java, C, C++</li>
+</ul>
+<p><code>Dynamic Type</code></p>
+<ul>
+<li>Perform type checking at runtime</li>
+<li>Error might not show till programs run</li>
+<li>No need to declare datatype of
+variables</li>
+<li>Saves time in writing code but might
+give error at runtime.</li>
+<li>Example: Python</li>
+</ul>
+<blockquote>
+<p>“This introduction is taken from Kunal Kushwaha’s Java Programming series and can be watched here: <a href="https://youtu.be/wn49bJOYAZM">https://youtu.be/wn49bJOYAZM</a>”</p>
+</blockquote>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="architecture"><a class="header" href="#architecture">Architecture</a></h1>
+<p>C++ is a compiled language where, the source code is first translated to object code. Each C++ source code file produces its own object code file. Because code in a file may reference code in another file, all the object code is sent to a linker which resolves any missing addresses (when different files refer to each other). Then this object code is translated into machine code (what the machine can actually execute) and one executable file is created.</p>
+<h1 id="memory"><a class="header" href="#memory">Memory</a></h1>
+<p>We have two type of memories in C++, stack and heap.</p>
+<p>When we invoke a function a chunk of memory, called an activation record or stack frame, is allocated that includes all necessary things for that function: memory for the parameters, memory for locals, address of where to return when the function finishes, etc. This memory is pushed on to the run time stack, a collection of these activation records. When the function finishes, the record is popped off the stack, i.e., the memory is released, so it can be reused.</p>
+<p>While heap is used when we dynamically allocate memory.</p>
+<blockquote>
+<p>This section is taken from an article I was reading, which can be read here <a href="http://courses.washington.edu/css342/zander/css332/arch.html">http://courses.washington.edu/css342/zander/css332/arch.html</a></p>
+</blockquote>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="hello-world-in-c--how-it-executes"><a class="header" href="#hello-world-in-c--how-it-executes">Hello World in C++ &amp; how it executes</a></h1>
+<pre><code class="language-cpp">#include &lt;iostream&gt;
+
+int main() {
+	std::cout &lt;&lt; &quot;Hello World&quot;;
+	return 0;
+}
+</code></pre>
+<h1 id="understanding-our-hello-world-code"><a class="header" href="#understanding-our-hello-world-code">Understanding our hello world code.</a></h1>
+<p><code>#include &lt;iostream&gt;</code></p>
+<p>#include is used to include some prewritten code. #include <iostream> is used to include some pre-written code which handles input and output for our program.</p>
+<p><code>int main()</code></p>
+<p>The instructions inside this are the beginning of our code and are executed first.</p>
+<p><code>std::cout &lt;&lt; &quot;Hello World&quot;;</code></p>
+<p>std:: is used to use standard functions that are provided by c++. cout &lt;&lt; is used to print anything which is on the right side of &lt;&lt;.</p>
+<p><code>return 0</code>; </p>
+<p>This marks the end of our main function.</p>
+<h1 id="how-c-code-is-executed"><a class="header" href="#how-c-code-is-executed">How C++ code is executed?</a></h1>
+<h2 id="preprocessing"><a class="header" href="#preprocessing">Preprocessing</a></h2>
+<p>A preprocessor program is a program which executes before the compilation takes place. It processes preprocessor code.</p>
+<p>In our hello world program <code>#include &lt;iostream&gt;</code> is preprocessor code which includes pre-written code for Input Output instructions  in our code. In other words, preprocessor code indicates certain manipulations are to be performed on the program before compilation. These manipulations typically consist of including other files or telling the compiler to define some code before compiling.</p>
+<h2 id="compilation"><a class="header" href="#compilation">Compilation</a></h2>
+<p>The compiler creates object code and stores it on disk. Object code is similar to Machine Language.</p>
+<h2 id="linking"><a class="header" href="#linking">Linking</a></h2>
+<p>The linker links the object code with the libraries, link all the object files required to execute our code and creates an executable file and stores it on disk.</p>
+<h2 id="loading"><a class="header" href="#loading">Loading</a></h2>
+<p>The loader puts the program in memory so the CPU can take each instruction and execute it.</p>
+<blockquote>
+<p>Although these notes are for revision and not for those who don’t know C++, I have included these introduction topics, since they are sometimes asked in interviews and stuff.</p>
+</blockquote>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="variables-and-data-types"><a class="header" href="#variables-and-data-types">Variables and Data Types</a></h1>
+<h1 id="variables-and-data-types-in-c"><a class="header" href="#variables-and-data-types-in-c">Variables and Data Types in C++</a></h1>
+<p>C++ is a strongly typed language, which means that every variable must be declared with a specific data type before it can be used. In this document, we will discuss the different data types and how to declare variables in C++.</p>
+<h2 id="data-types"><a class="header" href="#data-types">Data Types</a></h2>
+<h3 id="basic-data-types"><a class="header" href="#basic-data-types">Basic Data Types</a></h3>
+<p>C++ has several basic data types:</p>
+<ul>
+<li><strong>int</strong>: used to store whole numbers (positive or negative) without decimals.</li>
+<li><strong>double</strong>: used to store floating-point numbers with decimals.</li>
+<li><strong>char</strong>: used to store single characters (letters, numbers, symbols).</li>
+<li><strong>bool</strong>: used to store true or false values.</li>
+</ul>
+<h3 id="derived-data-types"><a class="header" href="#derived-data-types">Derived Data Types</a></h3>
+<p>C++ also has several derived data types:</p>
+<ul>
+<li><strong>arrays</strong>: used to store multiple values of the same data type in a single variable.</li>
+<li><strong>pointers</strong>: used to store memory addresses.</li>
+<li><strong>references</strong>: used to refer to a variable by another name.</li>
+<li><strong>functions</strong>: used to group a set of statements together to perform a specific task.</li>
+</ul>
+<h2 id="declaring-variables"><a class="header" href="#declaring-variables">Declaring Variables</a></h2>
+<p>To declare a variable in C++, you need to specify the data type and give it a name. Here are some examples:</p>
+<pre><code class="language-cpp">int age;
+double price;
+char grade;
+bool is_valid;
+
+</code></pre>
+<p>You can also initialize a variable when you declare it:</p>
+<pre><code class="language-cpp">int age = 30;
+double price = 19.99;
+char grade = 'A';
+bool is_valid = true;
+
+</code></pre>
+<h2 id="code-snippets"><a class="header" href="#code-snippets">Code Snippets</a></h2>
+<h3 id="example-1-adding-two-numbers"><a class="header" href="#example-1-adding-two-numbers">Example 1: Adding Two Numbers</a></h3>
+<pre><code class="language-cpp">#include &lt;iostream&gt;
+
+using namespace std;
+
+int main() {
+    int num1, num2, sum;
+
+    cout &lt;&lt; &quot;Enter two numbers: &quot;;
+    cin &gt;&gt; num1 &gt;&gt; num2;
+
+    sum = num1 + num2;
+
+    cout &lt;&lt; &quot;Sum = &quot; &lt;&lt; sum;
+
+    return 0;
+}
+
+</code></pre>
+<h3 id="example-2-finding-the-maximum-of-two-numbers"><a class="header" href="#example-2-finding-the-maximum-of-two-numbers">Example 2: Finding the Maximum of Two Numbers</a></h3>
+<pre><code class="language-cpp">#include &lt;iostream&gt;
+
+using namespace std;
+
+int main() {
+    int num1, num2, max_num;
+
+    cout &lt;&lt; &quot;Enter two numbers: &quot;;
+    cin &gt;&gt; num1 &gt;&gt; num2;
+
+    max_num = (num1 &gt; num2) ? num1 : num2;
+
+    cout &lt;&lt; &quot;Maximum number = &quot; &lt;&lt; max_num;
+
+    return 0;
+}
+
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="pointers"><a class="header" href="#pointers">Pointers</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="oops"><a class="header" href="#oops">OOPs</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="classes--objects"><a class="header" href="#classes--objects">Classes &amp; Objects</a></h1>
+<p><strong>Classes</strong> are blueprints that defines the variables and the methods common to all objects of a certain kind. </p>
+<p>For example, the object can be an Employee. All employees have certain common properties that are required for our program, like age, name, company etc</p>
+<p><strong>Objects</strong> are an instance of that class, for example if we have a class Employee with properties like Name, Company and Age, its object will be a specific employee with a  specific name, company and age.</p>
+<h2 id="defining-a-class--object"><a class="header" href="#defining-a-class--object">Defining a class &amp; Object</a></h2>
+<pre><code class="language-cpp">#include &lt;iostream&gt;
+using namespace std;
+
+//Defining a class
+class Employee {
+	//Properties of the class
+	string Name;
+	string Company;
+	int Age;
+	//Methods of the class
+	int calculateSalary(int serviceYears) {
+		return 100000*serviceYears;
+	}
+}
+
+int main() {
+	//Making an object
+	Employee e1;
+	//Accessing Properties of object
+	cout&lt;&lt;e1.Name;
+	//Accessing Methods of object
+	cout&lt;&lt;e1.calculateSalary(2);
+}
+</code></pre>
+<h2 id="example-from-programwiz"><a class="header" href="#example-from-programwiz">Example from Programwiz</a></h2>
+<pre><code class="language-cpp">// Program to illustrate the working of
+// objects and class in C++ Programming
+
+#include &lt;iostream&gt;
+using namespace std;
+
+// create a class
+class Room {
+
+   public:
+    double length;
+    double breadth;
+    double height;
+
+    double calculateArea() {
+        return length * breadth;
+    }
+
+    double calculateVolume() {
+        return length * breadth * height;
+    }
+};
+
+int main() {
+
+    // create object of Room class
+    Room room1;
+
+    // assign values to data members
+    room1.length = 42.5;
+    room1.breadth = 30.8;
+    room1.height = 19.2;
+
+    // calculate and display the area and volume of the room
+    cout &lt;&lt; &quot;Area of Room =  &quot; &lt;&lt; room1.calculateArea() &lt;&lt; endl;
+    cout &lt;&lt; &quot;Volume of Room =  &quot; &lt;&lt; room1.calculateVolume() &lt;&lt; endl;
+
+    return 0;
+}
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="access-modifiers"><a class="header" href="#access-modifiers">Access Modifiers</a></h1>
+<p>A class can have two sections, public and private, private section can be accessed only by the class itself, while, public can be accessed anywhere. </p>
+<pre><code class="language-cpp">class Animal {
+	private:
+		int age;
+		int legs;
+	
+	public:
+		int getAge() {
+			return age;
+		}
+}
+</code></pre>
+<p>Here, age and legs cannot be accessed directly since it’s private. So object cannot directly use <code>ani.age;</code> . While <code>getAge()</code> is public thus can be accessed anywhere.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="constructors"><a class="header" href="#constructors">Constructors</a></h1>
+<p>A constructor is a special type of member function that is called automatically when an object is created.</p>
+<p>In C++, a constructor has the same name as that of the class and it does not have a return type and is always <code>public</code>.</p>
+<pre><code class="language-cpp">class Animal {
+	public:
+	Animal(){
+		//This is a contructor
+		cout&lt;&lt;&quot;I am an animal!&quot;;
+	}
+}
+</code></pre>
+<p>When an object is made of Animal, <code>I am an animal</code> will be printed on screen.</p>
+<h2 id="parameters-in-constructors---parameterised-constructor"><a class="header" href="#parameters-in-constructors---parameterised-constructor">Parameters in constructors - <strong>Parameterised Constructor</strong></a></h2>
+<p>We can also have parameters in constructors</p>
+<pre><code class="language-cpp">class Animal {
+  private:
+    int legs;
+    int age;
+
+  public:
+    Animal(int legs, int ags) {
+      legs = legs;
+      age = age;
+    }
+};
+
+int main() {
+  Animal a1(4, 8);
+}
+</code></pre>
+<h2 id="copy-constructors"><a class="header" href="#copy-constructors">Copy Constructors</a></h2>
+<p>These are used to copy one object to other.</p>
+<pre><code class="language-cpp">class Animal {
+  private:
+    int legs;
+    int age;
+
+  public:
+    Animal(int legs, int ags) {
+      legs = legs;
+      age = age;
+    }
+		Animal(Animal &amp;obj) {
+      legs = obj.legs;
+      age = obj.age;
+    }
+};
+
+int main() {
+  Animal animal1(4, 8);
+	//This will copy animal1 to animal2
+  Animal animal2 = animal1;
+  return 0;
+}
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="stl"><a class="header" href="#stl">STL</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="vectors-in-c"><a class="header" href="#vectors-in-c">Vectors in C++</a></h1>
+<p>In C++, vectors are used to store elements of similar data types. However, unlike arrays, the size of a vector can grow dynamically.</p>
+<p>Vectors are part of the C++ Standard Template Library. To use vectors, we need to include the <code>vector</code> header file in our program.</p>
+<h2 id="declaraton"><a class="header" href="#declaraton">Declaraton</a></h2>
+<pre><code class="language-cpp">vector&lt;int&gt; v; //Declare an empty vector of int type
+vector&lt;int&gt; vector1 = {1, 2, 3, 4, 5}; //Initialize with 1,2,3,4,5
+vector&lt;int&gt; vector2 {1, 2, 3, 4, 5}; //Initialize with 1,2,3,4,5
+vector&lt;int&gt; vector3(5, 12); //⭐ Initialize with 12,12,12,12,12
+vector&lt;int, vector&lt;int&gt;&gt; vector2D(5, vector&lt;int&gt;(10,0)) //Initialize a 5x10 Vector with 0s 
+</code></pre>
+<h2 id="adding-elements-to-vector"><a class="header" href="#adding-elements-to-vector">Adding elements to vector</a></h2>
+<pre><code class="language-cpp">vector&lt;int&gt; num {1, 2, 3, 4, 5};
+num.push_back(6);
+</code></pre>
+<p><strong>Note</strong>: We can also use the <code>insert()</code> and <code>emplace()</code> functions to add elements to a vector.</p>
+<h2 id="accessing-elements"><a class="header" href="#accessing-elements">Accessing Elements</a></h2>
+<pre><code class="language-cpp">vector&lt;int&gt; num {1, 2, 3, 4, 5};
+cout &lt;&lt; &quot;Element at Index 0: &quot; &lt;&lt; num.at(0) &lt;&lt; endl;
+</code></pre>
+<p><strong>Note:</strong> Like an <a href="https://www.programiz.com/cpp-programming/arrays">array</a>, we can also use the square brackets <code>[]</code> to access vector elements. For example,</p>
+<pre><code class="language-cpp">vector&lt;int&gt; num {1, 2, 3};
+cout &lt;&lt; num[1];  // Output: 2
+</code></pre>
+<p>However, the <code>at()</code> function is preferred over <code>[]</code> because <code>at()</code> throws an exception whenever the vector is out of bound, while <code>[]</code> gives a garbage value</p>
+<h2 id="changing-elements"><a class="header" href="#changing-elements">Changing Elements</a></h2>
+<pre><code class="language-cpp">num.at(1) = 9;
+</code></pre>
+<h2 id="deleting-last-element"><a class="header" href="#deleting-last-element">Deleting Last Element</a></h2>
+<pre><code class="language-cpp">v.pop_back()
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="hash-maps"><a class="header" href="#hash-maps">Hash Maps</a></h1>
+<p>Unordered Hash Map / Set</p>
+<pre><code class="language-cpp">unordered_set&lt;int&gt; set;
+//Inserting Data
+set.insert(data);
+//If value exist or not
+if (set.find(data) != set.end())
+{
+cout&lt;&lt;&quot;Value Exists&quot;;
+}
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="-git-and-github"><a class="header" href="#-git-and-github">↘️ Git and Github</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="basics-of-git"><a class="header" href="#basics-of-git">Basics of Git</a></h1>
+<h3 id="initializing-git-repo"><a class="header" href="#initializing-git-repo">Initializing Git Repo</a></h3>
+<p>A git repository allows us to track version and changes in files of that repository. To initialize a empty git repository:</p>
+<pre><code class="language-bash">git init
+</code></pre>
+<h3 id="staging-files-tracking"><a class="header" href="#staging-files-tracking">Staging files (Tracking)</a></h3>
+<p>The git repository will be able to save history of files which are added to the <code>staged area</code>. To stage a specific file</p>
+<pre><code class="language-bash">git add file.txt
+</code></pre>
+<p>To stage multiple files</p>
+<pre><code class="language-bash">git add file.txt file2.txt
+</code></pre>
+<p>To stage all the files in git repository</p>
+<pre><code class="language-bash">git add .
+</code></pre>
+<h3 id="making-a-commit"><a class="header" href="#making-a-commit">Making a Commit</a></h3>
+<p>When we make a commit all the tracked files will get a save-point. In simpler terms we will be able to move to any commit if we want to. So if something goes wrong, we can revert to a previous commit where everything worked.</p>
+<p>To make a commit:</p>
+<pre><code class="language-bash">git commit -m &quot;This is my commit&quot;
+</code></pre>
+<p>The <code>-m &quot;This is my commit&quot;</code> is the message given to the commit. This works as a way for us to identify what was added in that commit.</p>
+<h3 id="removing-files-from-being-tracked"><a class="header" href="#removing-files-from-being-tracked">Removing files from being tracked</a></h3>
+<pre><code class="language-bash">git restore --staged file.txt
+</code></pre>
+<h3 id="checking-status-of-our-git-repository"><a class="header" href="#checking-status-of-our-git-repository">Checking status of our git repository</a></h3>
+<p>We can check how many files are being tracked, how many of them are modified since previous commit, and a lot more information by</p>
+<pre><code class="language-bash">git status
+</code></pre>
+<h3 id="the-git-log"><a class="header" href="#the-git-log">The Git Log</a></h3>
+<p>We can check all the commits, their authors, time, date etc. by</p>
+<pre><code class="language-bash">git log
+</code></pre>
+<p>When we git log, it will also print the hash of the commit. This hash is a unique id of commit and used to identify commits.</p>
+<pre><code class="language-bash">commit 4dc6314d74d5ba0e501e6d1bee220a9e7910539a (HEAD -&gt; master, origin/master, origin/HEAD)
+Author: Rakshit &lt;rakshit087@gmail.com&gt;
+Date:   Sun Feb 6 01:51:21 2022 +0530
+
+    Color Flood
+
+commit 3b1ef3ffbe820849e454ae17cfd9b5657e3d8f2f
+Author: Rakshit &lt;rakshit087@gmail.com&gt;
+Date:   Thu Feb 3 23:51:46 2022 +0530
+
+    N Queen
+</code></pre>
+<p>Here <code>Color Flood</code> , <code>N Queen</code> are the messages we wrote while committing. The string <code>4dc6314d74d5ba0e501e6d1bee220a9e7910539a</code>  is the hash id of the commit with the message <code>Color Food</code>.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="navigating-git"><a class="header" href="#navigating-git">Navigating Git</a></h1>
+<h2 id="the-git-graph"><a class="header" href="#the-git-graph">The Git Graph</a></h2>
+<p><img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a59233bf-8977-4361-ac85-0659c99e410b/Untitled.png" alt="Untitled" /></p>
+<p>Everything we do in a git repository can be represented by a Graph</p>
+<p>This graph can also have branches. By default we have one branch called <code>master</code> . Our current position (Where we are coding) in the git graph is pointed by a pointer called <code>Head</code>.</p>
+<h2 id="going-to-a-specific-commit"><a class="header" href="#going-to-a-specific-commit">Going to a specific commit</a></h2>
+<p>To checkout a previous commit, you will use the Git checkout command followed by the commit hash you retrieved from your Git log</p>
+<pre><code class="language-bash">git checkout &lt;commit hash&gt;
+</code></pre>
+<h2 id="deleting-until-a-previous-commit"><a class="header" href="#deleting-until-a-previous-commit">Deleting until a Previous Commit</a></h2>
+<p>Let’s say in the above graph we want to delete Commit 3 and Commit 2. We can use</p>
+<pre><code class="language-bash">git reset &lt;the hash of commit 1 will come here&gt;
+</code></pre>
+<p>All the files of the deleted commits will become <code>unstaged</code> files. </p>
+<p>To completely delete those files rather than staging them we can do</p>
+<pre><code class="language-bash">git reset --hard &lt;hash&gt; 
+</code></pre>
+<p>Please note: The hash we enter is the hash of the commit where your head should be after deletion.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="stashing-files"><a class="header" href="#stashing-files">Stashing Files</a></h1>
+<p><code>git stash</code> temporarily saves changes we have made to our files so that we can work on something else, and then come back and <code>unstash</code> those changes.</p>
+<h3 id="how-is-stashing-useful"><a class="header" href="#how-is-stashing-useful">How is stashing useful?</a></h3>
+<p>let’s say we have two branches and we are working on branch A, now when we switch to branch B, all the uncommitted files (staged / unstaged) will either get copied to branch B or we’ll get an error. To resolve this issue we can either first commit to branch A or we can <code>stash</code> those files and then move to branch B. The stashed files will not effect branch B, and can be restored when we move back to branch A.</p>
+<h3 id="stashing-files-1"><a class="header" href="#stashing-files-1">Stashing Files</a></h3>
+<pre><code class="language-bash">git stash
+</code></pre>
+<p>When we run git stash, all the staged files will go to stash area. By default, unstaged files will not be stashed. Adding the <code>-u</code> option (or <code>--include-untracked</code>) tells <code>git stash</code> to also stash your untracked files</p>
+<h2 id="restoring-stash"><a class="header" href="#restoring-stash">Restoring Stash</a></h2>
+<pre><code class="language-bash">git stash pop
+</code></pre>
+<p>This will restore the last changes added to stash</p>
+<h3 id="cleaning-stash"><a class="header" href="#cleaning-stash">Cleaning Stash</a></h3>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="branching"><a class="header" href="#branching">Branching</a></h1>
+<p>Branching in Git allows developers to create independent lines of development, enabling them to work on multiple features or bug fixes simultaneously without affecting the main codebase.</p>
+<ul>
+<li>Create a branch </li>
+</ul>
+<pre><code class="language-bash">git branch &lt;branch_name&gt;
+</code></pre>
+<ul>
+<li>Switch to a branch</li>
+</ul>
+<pre><code class="language-bash">git checkout &lt;branch_name&gt;
+</code></pre>
+<ul>
+<li>Create and switch to a branch</li>
+</ul>
+<pre><code class="language-bash">git checkout -b &lt;branch_name&gt;
+</code></pre>
+<ul>
+<li>List all branches</li>
+</ul>
+<pre><code class="language-bash">git branch
+</code></pre>
+<ul>
+<li>Delete a branch</li>
+</ul>
+<pre><code class="language-bash">git branch -d &lt;branch_name&gt;
+</code></pre>
+<ul>
+<li>Merge a branch into the active branch</li>
+</ul>
+<pre><code class="language-bash">git merge &lt;branch_name&gt;
+</code></pre>
+<ul>
+<li>Merge a branch into a target branch</li>
+</ul>
+<pre><code class="language-bash">git merge &lt;source_branch&gt; &lt;target_branch&gt;
+</code></pre>
+<ul>
+<li>Show all the commits in the current branch's history</li>
+</ul>
+<pre><code class="language-bash">git log
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="merging"><a class="header" href="#merging">Merging</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="basics-of-remote-git-repository"><a class="header" href="#basics-of-remote-git-repository">Basics of Remote Git Repository</a></h1>
+<p>Remote repos are versions of your project that are hosted on the Internet or network somewhere. You can have several of them, each of which generally is either read-only or read/write for you. Collaborating with others involves managing these remote repositories and pushing and pulling data to and from them when you need to share work.
+GitHub is a place where we can host and share our git repositories.  It can also be used to collaborate on projects.</p>
+<h3 id="creating-a-github-repository"><a class="header" href="#creating-a-github-repository">Creating a GitHub repository</a></h3>
+<ul>
+<li>Go to https://GitHub.com</li>
+<li>Sign up or login to your account</li>
+<li>On the top right we can see a plus button</li>
+<li>click it and select new repository</li>
+<li>Give your repository a name and click Create Repository</li>
+</ul>
+<h3 id="connecting-a-local-repository-to-a-new-remote-repository"><a class="header" href="#connecting-a-local-repository-to-a-new-remote-repository">Connecting a local repository to a new Remote repository</a></h3>
+<p>The first thing we will do is add link of our Remote repository to our local branch</p>
+<pre><code class="language-bash">git add remote origin &quot;link-of-github&quot;
+</code></pre>
+<p>Here <code>origin</code> is just an alias given to the URL, and can be used to identify the URL.</p>
+<p>To check all the URLs added to our local git, we can use</p>
+<pre><code class="language-bash">git remote -v
+</code></pre>
+<h3 id="pushing-changes-to-remote-repository"><a class="header" href="#pushing-changes-to-remote-repository">Pushing Changes to Remote Repository</a></h3>
+<p>Basically pushing means to upload all the changes we have made in our git to the the remote repo, this will include all the commits in it.</p>
+<pre><code class="language-bash">git push &lt;url-alias-where-want-to-push&gt; &lt;name-of-branch-we-want-to-push&gt;
+</code></pre>
+<p>Here the name of branch for us <code>master</code> and URL alias is <code>origin</code> thus the command will be</p>
+<pre><code class="language-bash">git push origin master
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="vim"><a class="header" href="#vim">Vim</a></h1>
+<p>Vim is a popular text editor used in the command line interface:</p>
+<ul>
+<li><code>i</code>: Switch to insert mode, allowing you to insert text.</li>
+<li><code>Esc</code>: Exit insert mode and return to command mode.</li>
+<li><code>:w</code>: Write the current file to disk.</li>
+<li><code>:q</code>: Quit Vim.</li>
+<li><code>:q!</code>: Quit Vim without saving changes.</li>
+<li><code>:wq</code>: Write the current file to disk and quit Vim.</li>
+<li><code>yy</code>: Copy the current line.</li>
+<li><code>p</code>: Paste the copied line.</li>
+<li><code>dd</code>: Delete the current line.</li>
+<li><code>u</code>: Undo the last change.</li>
+<li><code>Ctrl + r</code>: Redo the last change.</li>
+<li><code>/search_term</code>: Search for a specific term in the file.</li>
+<li><code>:s/old_text/new_text/g</code>: Replace all occurrences of 'old_text' with 'new_text' globally in the file.</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="-sql"><a class="header" href="#-sql">💉 SQL</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="basics-of-mysql"><a class="header" href="#basics-of-mysql">Basics of MySql</a></h1>
+<h1 id="creating-a-new-user"><a class="header" href="#creating-a-new-user">Creating a New User</a></h1>
+<pre><code class="language-sql">CREATE USER 'rakshit'@'localhost' IDENTIFIED BY 'password';
+GRANT ALL PRIVILEGES ON *.* TO 'rakshit'@'localhost';
+</code></pre>
+<p>List of available permissions- https://dev.mysql.com/doc/refman/8.0/en/privileges-provided.html</p>
+<h1 id="login-into-my-sql-and-starting-my-sql"><a class="header" href="#login-into-my-sql-and-starting-my-sql">Login Into My SQL and starting My SQL</a></h1>
+<pre><code class="language-sql">mysql -u db_user -p
+</code></pre>
+<h1 id="creating-new-databases"><a class="header" href="#creating-new-databases">Creating New Databases</a></h1>
+<pre><code class="language-jsx">CREATE DATABASE my_db;
+use my_db; //Using the Database
+</code></pre>
+<h1 id="creating-a-new-table"><a class="header" href="#creating-a-new-table">Creating a New Table</a></h1>
+<pre><code class="language-sql">CREATE TABLE vocab(id int(2),word varchar(20),meaning varchar(100));
+</code></pre>
+<h1 id="inserting-row-into-table"><a class="header" href="#inserting-row-into-table">Inserting Row Into Table</a></h1>
+<pre><code class="language-sql">INSERT INTO `links` (`id`, `title`, `link`) VALUES ('1', 'Search Anything you Want', 'https://www.google.com/');
+</code></pre>
+<h1 id="setting-a-primary-key--id"><a class="header" href="#setting-a-primary-key--id">Setting a primary key / ID</a></h1>
+<pre><code class="language-sql">CREATE TABLE Persons (
+    Personid int NOT NULL AUTO_INCREMENT,
+    LastName varchar(255) NOT NULL,
+    FirstName varchar(255),
+    Age int,
+    PRIMARY KEY (Personid)
+);
+</code></pre>
+<h1 id="summary-of-table"><a class="header" href="#summary-of-table">Summary of Table</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h3 id="adding-a-column"><a class="header" href="#adding-a-column">Adding a Column</a></h3>
+<pre><code class="language-sql">ALTER TABLE student ADD email VARCHAR(30);
+</code></pre>
+<h3 id="rename-column"><a class="header" href="#rename-column">Rename Column</a></h3>
+<pre><code class="language-sql">ALTER TABLE student RENAME COLUMN CGPA TO GPA;
+</code></pre>
+<h3 id="dropping-columns"><a class="header" href="#dropping-columns">Dropping Columns</a></h3>
+<pre><code class="language-sql">ALTER TABLE student DROP COLUMN email;
+</code></pre>
+<h3 id="modifying-data-type"><a class="header" href="#modifying-data-type">Modifying Data Type</a></h3>
+<pre><code class="language-sql">ALTER TABLE student MODIFY sname VARCHAR(40);
+</code></pre>
+<h3 id="clear-all-entries-of-table"><a class="header" href="#clear-all-entries-of-table">Clear all Entries of Table</a></h3>
+<pre><code class="language-sql">TRUNCATE TABLE faculty;
+</code></pre>
+<h3 id="deleting-a-table"><a class="header" href="#deleting-a-table">Deleting a Table</a></h3>
+<pre><code class="language-sql">DROP TABLE student;
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="writing-queries"><a class="header" href="#writing-queries">Writing Queries</a></h1>
+<p>where clause is used to filter the rows returned by the query.</p>
+<pre><code class="language-sql">SELECT * FROM student WHERE GPA&gt;8; 
+SELECT * FROM course WHERE credits=2;
+SELECT * FROM faculty WHERE salary&gt;10000 and salary&lt;100000; 
+</code></pre>
+<h3 id="viewing-specific-columns"><a class="header" href="#viewing-specific-columns">Viewing specific Columns</a></h3>
+<pre><code class="language-sql">SELECT name FROM student WHERE(GPA&gt;8 or GPA&lt;3);
+SELECT name FROM subject WHERE(credits!=10);
+SELECT name,GPA FROM students WHERE(email != NULL);
+</code></pre>
+<h3 id="orderingsorting-table"><a class="header" href="#orderingsorting-table">Ordering/Sorting Table</a></h3>
+<pre><code class="language-sql">SELECT * FROM students ORDER BY GPA DESC;
+SELECT * FROM stocks ORDER BY price ASC;
+</code></pre>
+<p>If we want to sort further (for example sorting those with equal GPA)</p>
+<pre><code class="language-sql">SELECT * FROM students ORDER BY GPA,rollno DESC;
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="constraints"><a class="header" href="#constraints">Constraints</a></h1>
+<p>There are some constraints in SQL that can change how data is stored in a SQL Table</p>
+<ul>
+<li>NOT NULL : Cannot store null values in that column</li>
+<li>PRIMARY KEY</li>
+<li>FOREIGN KEY</li>
+<li>CHECK</li>
+<li>DEFAULT</li>
+</ul>
+<pre><code class="language-sql">CREATE TABLE student (ID int NOT NULL, name VARCHAR(10) NOT NULL);
+</code></pre>
+<h3 id="primary-key"><a class="header" href="#primary-key">Primary Key</a></h3>
+<pre><code class="language-sql">CREATE TABLE Persons (
+    Personid int NOT NULL AUTO_INCREMENT,
+    LastName varchar(255) NOT NULL,
+    FirstName varchar(255),
+    Age int,
+    PRIMARY KEY (Personid)
+);
+</code></pre>
+<h3 id="foreign-key"><a class="header" href="#foreign-key">Foreign Key</a></h3>
+<p>Connects data of one table to another table.</p>
+<pre><code class="language-sql">CREATE TABLE orders
+(
+	oid INT NOT NULL UNIQUE,
+	cid INT,
+	PRIMARY KEY (oid),
+	FOREIGN KEY (cid) REFERENCES Customers(cid); //HERE Customers is the Table name
+																							 //Which has cid as primary key
+);
+</code></pre>
+<h3 id="check"><a class="header" href="#check">Check</a></h3>
+<pre><code class="language-sql">CREATE TABLE student
+(
+	id INT NOT NULL,
+	name VARCHAR(30),
+	age int CHECK(AGE&gt;=18)
+);
+</code></pre>
+<h3 id="default"><a class="header" href="#default">Default</a></h3>
+<pre><code class="language-sql">CREATE TABLE student
+(
+	id INT NOT NULL,
+	name VARCHAR(30),
+	age int DEFAULT 18
+);
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="advanced-queries"><a class="header" href="#advanced-queries">Advanced Queries</a></h1>
+<h2 id="filtering"><a class="header" href="#filtering">Filtering</a></h2>
+<pre><code class="language-sql">WHERE id IN (9,10,11,12);
+</code></pre>
+<pre><code class="language-sql">WHERE name = 'Tofu' OR 'Konbu'
+</code></pre>
+<ul>
+<li>SQL will not evaluate second condition if first condition is satisfied in OR.</li>
+<li>IN executes faster than OR.</li>
+</ul>
+<pre><code class="language-sql">WHERE name = 'Tofu' AND 'Konbu'
+</code></pre>
+<pre><code class="language-sql">WHERE name = 'Tofu' AND NOT city ='Konbu'
+</code></pre>
+<h2 id="using-wild-cards"><a class="header" href="#using-wild-cards">Using Wild Cards</a></h2>
+<ul>
+<li>'%Pizza' : Will grab everything ending with Pizza.</li>
+<li>'Pizza%' : Will grab everything starting with Pizza.</li>
+<li>'%pizza%': Will grab everything containing word pizza.</li>
+</ul>
+<pre><code class="language-sql">SELECT names FROM students WHERE email=&quot;t%.@gmail.com&quot;
+</code></pre>
+<ul>
+<li>Wild cards cannot be used in NULL or Numerical values.</li>
+<li>We also have _ as wildcards</li>
+<li>We can also use [] as wildcards</li>
+</ul>
+<h2 id="applying-math"><a class="header" href="#applying-math">Applying Math</a></h2>
+<pre><code class="language-sql">SELECT
+(
+	pid,
+	price,
+	amount,
+	price*amount AS total //We don't have any column called total in actual database.
+	FROM products
+)
+</code></pre>
+<ul>
+<li>Priority</li>
+</ul>
+<p>Parenthesis → Exponents → Multiplication → Division → Addition → Subtraction</p>
+<h2 id="selecting-unique-values"><a class="header" href="#selecting-unique-values">Selecting Unique Values</a></h2>
+<pre><code class="language-sql">SELECT DISTINCT CITY FROM STATION WHERE ID%2=0;
+</code></pre>
+<h2 id="rounding-off"><a class="header" href="#rounding-off">Rounding Off</a></h2>
+<p><strong>Round</strong> does a standard rounding. If value is .5 or over then you get back 1. If it’s less than .5 you get back 0</p>
+<p><strong>Ceiling</strong> returns the integer equal to or higher than the value passed in.</p>
+<pre><code class="language-sql">SELECT ROUND(235.400,0); 
+
+Answer= 235.000 
+
+SELECT  CAST(ROUND(235.400,0) as int) 
+
+Answer= 235
+</code></pre>
+<h2 id="replacing"><a class="header" href="#replacing">Replacing</a></h2>
+<pre><code class="language-sql">SELECT CEIL(AVG(Salary)-AVG(REPLACE(Salary,'0',''))) FROM EMPLOYEES;
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="aggregate-functions"><a class="header" href="#aggregate-functions">Aggregate Functions</a></h1>
+<h3 id="avg-function"><a class="header" href="#avg-function">Avg Function</a></h3>
+<pre><code class="language-sql">SELECT Avg(unitPrice) AS AveragePrice FROM products;
+</code></pre>
+<p>In Avg, NULL values are ignored.</p>
+<h3 id="count-function"><a class="header" href="#count-function">Count Function</a></h3>
+<pre><code class="language-sql">SELECT COUNT(*) as Total FROM products; //Here NULL are not ignored
+SELECT COUNT(id) as Total FROM products; //Here NULL are IGNORED
+</code></pre>
+<h3 id="min--max-function"><a class="header" href="#min--max-function">Min / Max Function</a></h3>
+<pre><code class="language-sql">SELECT MAX(price) as MaximumPrice FROM Stocks;
+</code></pre>
+<h3 id="sum-function"><a class="header" href="#sum-function">Sum Function</a></h3>
+<pre><code class="language-sql">SELECT Sum (unitprice*amount) AS total FROM Students;
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="grouping-data"><a class="header" href="#grouping-data">Grouping Data</a></h1>
+<pre><code class="language-sql">COUNT(cusid) AS Total_Customer FROM customers GROUP BY region;
+</code></pre>
+<ul>
+<li>Nulls are grouped together.</li>
+<li>Will give multiple columns.</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="sub-queries"><a class="header" href="#sub-queries">Sub Queries</a></h1>
+<pre><code class="language-sql">SELECT
+(
+	cusid,company,region,
+	FROM Customers
+	WHERE cusid IN (
+		SELECT cusid FROM Orders WHERE prince&gt;10000
+	)
+);
+</code></pre>
+<p>Subquery Select can choose only one column.</p>
+<pre><code class="language-sql">SELECT cusname,cusstate, (
+	SELECT COUNT(*) as Orders WHERE Customer.cusid = Orders.cusid;
+) AS Orders FROM Customers;
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="joins"><a class="header" href="#joins">Joins</a></h1>
+<h2 id="cartesian-joins"><a class="header" href="#cartesian-joins">Cartesian Joins</a></h2>
+<pre><code class="language-sql">Table 1     Table 2         
+1           4     
+2           5                 CARTISIAN JOIN -&gt; 14,15,16,24,25,26,34,35,36
+3           6
+</code></pre>
+<pre><code class="language-sql">SELECT product_name,unit_price
+FROM suppliers CROSS JOIN product
+</code></pre>
+<h2 id="inner-joins"><a class="header" href="#inner-joins">Inner Joins</a></h2>
+<p>Will join those rows that have matching values in both tables.</p>
+<pre><code class="language-sql">SELECT suppliers.CompanyName, ProductName, UnitPrice 
+FROM suppliers INNER JOIN products
+ON suppliers.ID = products.ID 
+</code></pre>
+<pre><code class="language-sql">//We are using Alias here
+SELECT o.orderID, c.CompanyName, e.LastName
+FROM (
+	(orders o INNER JOIN customers c ON o.CusID = c.CusID)
+	INNER JOIN
+	employee e ON o.EmpID = e.EmpID
+)
+</code></pre>
+<h2 id="self-joins"><a class="header" href="#self-joins">Self Joins</a></h2>
+<pre><code class="language-sql">SELECT a.CusName AS CusName1,
+			 b.CusName AS CusName2,
+			 a.City
+FROM customers a, customers b
+WHERE a.CusID = b.CusID AND a.City = b.City 
+</code></pre>
+<h2 id="left-joins"><a class="header" href="#left-joins">Left Joins</a></h2>
+<p>Returns the complete left table and the matching records from the right table.</p>
+<p>If there is no matching record on right table, it returns null on right side</p>
+<pre><code class="language-sql">SELECT column_name(s)
+FROM table1
+LEFT JOIN table2
+ON table1.column_name = table2.column_name;
+</code></pre>
+<p>Eg: Few customers didn't placed any order but we still want that info.</p>
+<h2 id="right-joins"><a class="header" href="#right-joins">Right Joins</a></h2>
+<p>Returns the complete right table and the matching records from the left table.</p>
+<p>If there is no matching record on left table, it returns null on right side</p>
+<pre><code class="language-sql">SELECT column_name(s)
+FROM table1
+RIGHT JOIN table2
+ON table1.column_name = table2.column_name;
+</code></pre>
+<h2 id="outer-join"><a class="header" href="#outer-join">Outer Join</a></h2>
+<p>Combination of Right and Left Join.</p>
+<h2 id="union"><a class="header" href="#union">Union</a></h2>
+<ul>
+<li>Union is used to combine result set of two or more SELECT statement..</li>
+<li>Must have same columns and data type</li>
+</ul>
+<pre><code class="language-sql">SELECT city,country FROM customers
+UNION
+SELECT city,country FROM suppliers
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="strings-date-and-time"><a class="header" href="#strings-date-and-time">Strings, Date and Time</a></h1>
+<h2 id="concatenation"><a class="header" href="#concatenation">Concatenation</a></h2>
+<pre><code class="language-sql">SELECT
+firstname + &quot; &quot; + lastname,
+FROM Customers;
+</code></pre>
+<h2 id="trim"><a class="header" href="#trim">Trim</a></h2>
+<p>Used to clear spaces.</p>
+<pre><code class="language-sql">SELECT TRIM(&quot;        Rakshit         &quot;) AS Trimmed;
+</code></pre>
+<h2 id="substring"><a class="header" href="#substring">Substring</a></h2>
+<pre><code class="language-sql">SELECT name, substr(name,2,5) FROM students;
+</code></pre>
+<p>Alexender lex</p>
+<p>Lulu ulu</p>
+<h2 id="uppercase-and-lowercase"><a class="header" href="#uppercase-and-lowercase">Uppercase and Lowercase</a></h2>
+<p>To convert results to Upper / Lowercase.</p>
+<pre><code class="language-sql">SELECT upper(name) FROM Cus;
+SELECT lower(name) FROM Cus;
+</code></pre>
+<h3 id="length-of-string"><a class="header" href="#length-of-string">Length of String</a></h3>
+<pre><code class="language-sql">select city, length(city) from station
+order by length(city),city asc
+limit 1;
+</code></pre>
+<h1 id="date-and-time"><a class="header" href="#date-and-time">Date and Time</a></h1>
+<pre><code class="language-sql">SELECT 
+birthday, 
+strftime('%y',birthday) AS y,
+strftime('%m',birthday) AS m,
+strftime('%d',birthday) AS d,
+FROM 
+emp;
+</code></pre>
+<pre><code class="language-sql">//Current Date
+SELECT Date(now);
+//Format
+SELECT strftime('%y %m %d','now') as today;
+//We can also subtract dates
+SELECT Date(('now')-Birthday) as Age;
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="case-statements"><a class="header" href="#case-statements">Case Statements</a></h1>
+<pre><code class="language-sql">SELECT 
+id, name,
+CASE city
+	WHEN 'Jodhpur' THEN 'Jodhpur'
+	ELSE 'Other'
+END AS 'City Type'
+FROM employees;
+</code></pre>
+<pre><code class="language-sql">SELECT id, name
+CASE bytes
+	WHEN bytes &lt; 300000 THEN 'Small'
+	WHEN bytes &gt; 300000 THEN 'Small'
+	ELSE 'Other'
+END AS 'BYTE SIZE'
+FROM tracks;
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="views"><a class="header" href="#views">Views</a></h1>
+<ul>
+<li>A stored query</li>
+<li>Removed after database's connection ends.</li>
+<li>After adding my view we can use it like a table</li>
+</ul>
+<pre><code class="language-sql">CREATE VIEW myview
+AS
+SELECT cusid, cusname 
+FROM customer
+</code></pre>
+<ul>
+<li>Now we can use myview as a table</li>
+</ul>
+<pre><code class="language-sql">SELECT * FROM myview
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="pivoting-data"><a class="header" href="#pivoting-data">Pivoting Data</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="variables"><a class="header" href="#variables">Variables</a></h1>
+<p>QUERY TO FIND MEDIAN</p>
+<pre><code class="language-sql">SET @N := 0;
+SELECT COUNT(*) FROM STATION INTO @TOTAL;
+SELECT
+    ROUND(AVG(A.LAT_N), 4)
+FROM (SELECT @N := @N +1 AS ROW_ID, LAT_N FROM STATION ORDER BY LAT_N) A
+WHERE
+    CASE WHEN MOD(@TOTAL, 2) = 0 
+            THEN A.ROW_ID IN (@TOTAL/2, (@TOTAL/2+1))
+            ELSE A.ROW_ID = (@TOTAL+1)/2
+    END
+;
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="-docker"><a class="header" href="#-docker">🐳 Docker</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="what-is-a-container"><a class="header" href="#what-is-a-container">What is a container?</a></h1>
+<p>A container is a standard unit of software that packages up code and all its dependencies so the application runs quickly and reliably from one computing environment to another. </p>
+<ul>
+<li>Docker containers are basically layer of images.</li>
+<li>The Base Image is usually Linux</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="docker-basics"><a class="header" href="#docker-basics">Docker Basics</a></h1>
+<h2 id="checking-docker-version--info"><a class="header" href="#checking-docker-version--info">Checking Docker Version &amp; Info</a></h2>
+<p><code>docker version</code>: Installed Docker Version</p>
+<p><code>docker info</code>: Detailed Information about docker. (Including active container etc)</p>
+<h2 id="images-vs-containers"><a class="header" href="#images-vs-containers">Images vs Containers</a></h2>
+<ul>
+<li>An Image is the application we want to run</li>
+<li>A container is a instance of that image running as a process.</li>
+<li>We can have multiple container of the same image</li>
+</ul>
+<h2 id="docker-hub"><a class="header" href="#docker-hub">Docker Hub</a></h2>
+<p>Docker Hub is a public repo of Docker Images. </p>
+<p><strong>To pull an image from the Docker Hub</strong></p>
+<p><code>docker pull image</code></p>
+<p>For Example: <code>docker pull redis</code></p>
+<h2 id="basic-commands"><a class="header" href="#basic-commands">Basic Commands</a></h2>
+<p>Recent version of docker introduced a new format to write commands earlier it was</p>
+<pre><code class="language-jsx">docker &lt;command&gt; (options)
+</code></pre>
+<p>Now, We have</p>
+<pre><code class="language-jsx">docker &lt;command&gt; &lt;subcommand&gt; (options)
+</code></pre>
+<p>Docker is backward compatible so both formats works.</p>
+<ul>
+<li>Checking Installed Images: <code>docker images</code></li>
+<li><strong>Creating</strong> and running a new container: <code>docker container run redis</code></li>
+<li>Creating a detached container: <code>docker container run -detach redis</code> (Detached basically means it will run in background)</li>
+<li><strong>Creating</strong> and running a new container with a name: <code>docker container run v</code></li>
+<li>To list running containers: <code>docker container ls</code></li>
+<li>To <strong>list</strong> all container: <code>docker container ls -a</code></li>
+<li>To <strong>exec</strong> a Docker container inside a terminal: <code>docker exec &lt;containerid&gt; /bin/bash -it</code></li>
+<li>To <strong>start</strong> a container: <code>dockerx start &lt;dockerid&gt;</code>   (Will not create a new container)</li>
+<li><strong>Stopping</strong> a container: <code>docker container stop &lt;container-id&gt;</code></li>
+</ul>
+<h2 id="managing-environment-variables"><a class="header" href="#managing-environment-variables">Managing Environment Variables</a></h2>
+<p>To pass in Environment variables while starting a container we do</p>
+<p><code>docker container run --env PASSWORD=123 mongodb</code></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="ports-in-docker"><a class="header" href="#ports-in-docker">Ports in Docker</a></h1>
+<p>Containers have their own set of virtual ports, just like a physical machine. We can bind host machine's ports with docker ports.</p>
+<p><img src="docker/../assets/docker_ports.png" alt="diagram" /></p>
+<p>Note that Containers can have same ports</p>
+<p><strong>To bind container port to our machine: <code>docker container run -p 6000:6379 redis</code></strong></p>
+<p>Here, host port 6000 is binded to container port 6379 ****</p>
+<h2 id="containers-network"><a class="header" href="#containers-network">Containers Network</a></h2>
+<p>If two containers are having same network, they can intercommunicate, but first we need to create a new network</p>
+<p><code>docker network create nameofnetwork</code></p>
+<p>Now this network can be used by multiple containers</p>
+<p><code>docker run ubuntu --net nameofnetwork</code></p>
+<h2 id="everything-so-far"><a class="header" href="#everything-so-far">Everything so Far</a></h2>
+<pre><code class="language-bash">docker run -d\\
+	--name mongodb \\
+	-p 27017:27127 \\
+	-e MONGO_INITDB_ROOT_USERNAME = admin \\
+	-e MONGO_INITDB_ROOT_PASSWORD = password \\
+	--net mongo-network \\
+mongodb
+
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="docker-compose"><a class="header" href="#docker-compose">Docker Compose</a></h1>
+<ul>
+<li>Docker compose is used to take care of automating Docker Run command, i.e it can automate creating Docker Containers from pre-existing images.</li>
+<li>It is written in a <code>yaml</code> file.</li>
+</ul>
+<pre><code class="language-bash">docker run -d\
+	--name mongodb \
+	-p 27017:27127 \
+	-e MONGO_INITDB_ROOT_USERNAME \
+	 = admin \
+	-e MONGO_INITDB_ROOT_PASSWORD \
+	 = password \
+	--net mongo-network \
+mongodb
+</code></pre>
+<p>This 👆 can be written as:</p>
+<pre><code class="language-yaml">version:'3'
+services:
+	mongodb:
+		image:mongo
+		ports:
+			-27017:27017
+		environment:
+			-MONGO_INITDB_ROOT_USERNAME:admin
+	mongo-express:
+		image:express
+		ports:
+			-3000:3000
+			- 
+</code></pre>
+<ul>
+<li>The given docker compose file will create two containers - express and mongo</li>
+<li>Docker Composers will take care of creating a common network</li>
+<li>To run the docker compose: <code>docker -compose -f mongo.yaml up</code></li>
+<li>To stop all the containers in compose: <code>docker -compose -f mongo.yaml down</code></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="creating-docker-images"><a class="header" href="#creating-docker-images">Creating docker Images</a></h1>
+<pre><code class="language-docker">#Base Image
+FROM node
+#Setting Environment Variables
+ENV MONGO_DB_USERNAME=admin
+		MONGO_DB_PWD=pass
+#Running Commands
+RUN mkdir /home/app
+#Copying files from host to container
+COPY . /home/app
+#Initial Command
+CMD [&quot;npm&quot;,&quot;home/app/app.js&quot;]
+</code></pre>
+<ul>
+<li>We have to save this file as Dockerfile</li>
+<li>To build a docker file: <code>docker build -t my-app:1.0 &lt;location&gt;</code></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="rust"><a class="header" href="#rust">Rust</a></h1>
+<p><code>The Basics</code></p>
+<ul>
+<li><a href="rust/basics/01_hellorust.html">Hello Rust</a></li>
+<li><a href="rust/basics/02_commonconcepts.html">Common Concepts 1</a></li>
+<li><a href="rust/basics/03_commonconcepts.html">Common Concepts 2</a></li>
+<li><a href="rust/basics/04_control_flow.html">Control Flow</a></li>
+</ul>
+<p><code>Ownership in Rust</code></p>
+<ul>
+<li><a href="rust/ownership/05_diff_mem.html">Different Memories</a></li>
+<li><a href="rust/ownership/06_what_is.html">What is Ownership</a></li>
+<li><a href="rust/ownership/07_in_functions.html">Ownership in Functions</a></li>
+<li><a href="rust/ownership/08_reference.html">Passing values by Reference</a></li>
+<li><a href="rust/ownership/08_slices.html">Slices</a></li>
+</ul>
+<p><code>Structs</code></p>
+<ul>
+<li><a href="rust/structs/09_defining.html">Defining Structs</a></li>
+<li><a href="rust/structs/10_derived_trait.html">Printing with Derived Traits</a></li>
+<li><a href="rust/structs/11_methods.html">Methods in Structs</a></li>
+</ul>
+<p><code>Enums</code></p>
+<ul>
+<li><a href="rust/enums/12_defining.html">Defining Enums</a></li>
+<li><a href="rust/enums/13_option.html">Option Enum</a></li>
+<li><a href="rust/enums/14_match.html">match Statement</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="basic-concepts-in-rust"><a class="header" href="#basic-concepts-in-rust">Basic Concepts in Rust</a></h1>
+<ul>
+<li><a href="rust/basics/01_hellorust.html">Hello Rust</a></li>
+<li><a href="rust/basics/02_commonconcepts.html">Common Concepts 1</a></li>
+<li><a href="rust/basics/03_commonconcepts.html">Common Concepts 2</a></li>
+<li><a href="rust/basics/04_control_flow.html">Control Flow</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="hello-world"><a class="header" href="#hello-world">Hello World!</a></h1>
+<p>Rust is a modern programming language that focuses on performance, reliability, and safety. </p>
+<ul>
+<li>Rustc is the Rust compiler, which is used to compile Rust code into executable files.</li>
+<li>Cargo is the Rust package manager, which helps manage dependencies and build and test Rust projects.</li>
+</ul>
+<p>To create a new cargo project, first, make sure you have Rust installed on your machine. Then, open your terminal or command prompt and run the following command:</p>
+<pre><code class="language-bash">cargo new hello_world
+</code></pre>
+<p>This will create a new cargo project called &quot;hello_world&quot; in your current directory.</p>
+<p>Next, navigate into the &quot;hello_world&quot; directory by running:</p>
+<pre><code>cd hello_world
+
+</code></pre>
+<p>Inside the &quot;src&quot; directory of your new project, you'll find a file called &quot;<a href="http://main.rs/">main.rs</a>&quot;. This is where you'll write your Rust code.</p>
+<p>To print &quot;hello, world!&quot; in Rust, you can use the following code:</p>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+    println!(&quot;Hello, world!&quot;);
+}</code></pre></pre>
+<p>This code defines a function called &quot;main&quot; and uses the &quot;println!&quot; macro to print &quot;Hello, world!&quot; to the console.</p>
+<p>To build and run your Rust project, run the following command from within the &quot;hello_world&quot; directory:</p>
+<pre><code>cargo build
+</code></pre>
+<p>This will compile your project and execute the resulting executable. You should see &quot;Hello, world!&quot; printed to the console.</p>
+<p>Congratulations, you've just created and run your first Rust program using cargo!</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="common-concepts-in-rust"><a class="header" href="#common-concepts-in-rust">Common Concepts in Rust</a></h1>
+<h2 id="declaring-a-variable"><a class="header" href="#declaring-a-variable">Declaring a Variable</a></h2>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+    let mut x = 200;
+    x = x + 5;
+    print!(&quot;Value of x is {}&quot;, x);
+}</code></pre></pre>
+<p>The above Rust code declares a mutable variable <code>x</code> and initializes it to the value <code>200</code>. The <code>mut</code> keyword is used to indicate that the variable is mutable and can be modified later in the code.</p>
+<p>Rust, by default, makes all variables immutable. This means that once a value is assigned to a variable, it cannot be modified. By using the <code>mut</code> keyword, we can declare a variable as mutable, which allows us to change its value later in the code.</p>
+<h2 id="declaring-a-constants"><a class="header" href="#declaring-a-constants">Declaring a constants</a></h2>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+    const AGE_LIMIT: u32 = 18;
+    print!(&quot;{}&quot;, AGE_LIMIT);
+}</code></pre></pre>
+<h2 id="constants-vs-immutable-variable"><a class="header" href="#constants-vs-immutable-variable">Constants vs Immutable Variable</a></h2>
+<p>In Rust, constants (const) and immutable variables (let) are similar as they both represent values that can't be changed once defined. However, there are some differences:</p>
+<div class="table-wrapper"><table><thead><tr><th>Constants</th><th>Immutable Variable</th></tr></thead><tbody>
+<tr><td>Declared with const, must have a known type at compile-time, and can be used in constant expressions.</td><td>Declared with let, evaluated at runtime, and used in non-constant expressions.</td></tr>
+<tr><td>Type known at compile-time, assigned constant expressions evaluated at compile-time.</td><td>Type determined at runtime, initial value from runtime calculations.</td></tr>
+<tr><td>: Embedded into the compiled binary, not stored in memory at runtime.</td><td>Stored in memory, have addresses.</td></tr>
+<tr><td>Global scope, immutable.</td><td>Scoped visibility, immutable by default, shadowable.</td></tr>
+</tbody></table>
+</div>
+<h1 id="data-types-in-rust"><a class="header" href="#data-types-in-rust">Data Types in Rust</a></h1>
+<h2 id="scaler-datatype"><a class="header" href="#scaler-datatype">Scaler Datatype</a></h2>
+<p>In Rust, scalar types represent single values. There are four primary scalar types:</p>
+<ol>
+<li>Integer Types: Integer types represent whole numbers without fractional parts. Rust provides various integer types with different ranges and memory sizes. Here's an example:</li>
+</ol>
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>let a: u8 = 255;    // Unsigned 8-bit integer, range: 0 to 255
+let b: i32 = -42;   // Signed 32-bit integer
+<span class="boring">}</span></code></pre></pre>
+<ol>
+<li>Floating-Point Types: Floating-point types represent numbers with fractional parts. Rust has two floating-point types: <strong><code>f32</code></strong> (single precision) and <strong><code>f64</code></strong> (double precision). Here's an example:</li>
+</ol>
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>let c: f32 = 3.14;   // 32-bit floating-point number
+let d: f64 = 2.718;  // 64-bit floating-point number
+<span class="boring">}</span></code></pre></pre>
+<ol>
+<li>Boolean Type: The boolean type (<strong><code>bool</code></strong>) represents either true or false. It is useful for logical conditions and branching. Here's an example:</li>
+</ol>
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>let is_rust_fun: bool = true;
+let is_python_fun = false;  // Type inference: bool
+<span class="boring">}</span></code></pre></pre>
+<h2 id="compound-types"><a class="header" href="#compound-types">Compound Types</a></h2>
+<p>Can group multiple values to one.</p>
+<ol>
+<li>
+<p>Tuples</p>
+<ul>
+<li>have fixed length.</li>
+<li>each position of tuple has a type.</li>
+</ul>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+    // tuples
+    let tup: (i32, u32, i16) = (1, 2, 3);
+    let (x, y, z) = tup;
+    println!(&quot;{}&quot;, x);
+		let index_value = tup.1;
+}</code></pre></pre>
+</li>
+<li>
+<p>Array</p>
+<ul>
+<li>Uniform in nature.</li>
+<li>Fixed length.</li>
+</ul>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+    let a = [1, 2, 3];
+    let b: [i32; 5] = [1, 2, 3, 4, 5]; // array of type i32 and size 5
+    let c = [0; 5]; // [0, 0 , 0, 0, 0]
+    let index_value = b[2]; // gives 3
+}</code></pre></pre>
+</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="common-concepts-in-rust-2"><a class="header" href="#common-concepts-in-rust-2">Common Concepts in Rust 2</a></h1>
+<h2 id="functions-in-rust"><a class="header" href="#functions-in-rust">Functions in Rust</a></h2>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+    add(2, 3);
+}
+
+fn add(x: i32, y: i32) {
+    println!(&quot;The sum of x and y is {}&quot;, x + y);
+}</code></pre></pre>
+<ul>
+<li>it does not matter where you define your functions in the file, above main / below main.</li>
+<li>each parameter must have type.</li>
+</ul>
+<h1 id="expressions-vs-statements"><a class="header" href="#expressions-vs-statements">Expressions vs Statements</a></h1>
+<ul>
+<li><strong>Statements</strong> are instructions that perform some action and do not return a value.</li>
+<li><strong>Expressions</strong> evaluate to a resultant value</li>
+</ul>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+    // statement
+    let x = 5;
+
+    // expression
+    let y = {
+        let z = 3;
+        z + 1
+    };
+
+    println!(&quot;x is {}&quot;, x);
+    println!(&quot;y is {}&quot;, y);
+}
+</code></pre></pre>
+<p>Note that z+1 does not have a <code>;</code></p>
+<h1 id="returning-value-in-function"><a class="header" href="#returning-value-in-function">Returning value in Function</a></h1>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+    let x = plus_one(5);
+
+    println!(&quot;The value of x is: {x}&quot;);
+}
+
+fn plus_one(x: i32) -&gt; i32 {
+    x + 1
+}</code></pre></pre>
+<p>Note that we defined the type of return by <code>-&gt;</code></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="control-flow"><a class="header" href="#control-flow">Control Flow</a></h1>
+<h1 id="if-else"><a class="header" href="#if-else">If-Else</a></h1>
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>if {condition1} {
+    // Code to execute if condition1 is true
+} else if {condition2} {
+    // Code to execute if condition2 is true
+} else {
+    // Code to execute if all conditions are false
+}
+
+<span class="boring">}</span></code></pre></pre>
+<h2 id="if-as-expression"><a class="header" href="#if-as-expression">If as Expression</a></h2>
+<p>In Rust, the <code>if</code> statement can also be used as an expression. This means that the <code>if</code> statement can return a value that can be used in other parts of the program. Here is an example:</p>
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>let x = 5;
+let y = if x == 5 { 10 } else { 15 };
+<span class="boring">}</span></code></pre></pre>
+<h1 id="while-loop"><a class="header" href="#while-loop">While Loop</a></h1>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+    let mut number = 3;
+    while number != 0 {
+        println!(&quot;{number}!&quot;);
+        number -= 1;
+    }
+    println!(&quot;LIFTOFF!!!&quot;);
+}</code></pre></pre>
+<h1 id="for-loop"><a class="header" href="#for-loop">For Loop</a></h1>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+    let a = [10, 20, 30, 40, 50];
+
+    for element in a {
+        println!(&quot;the value is: {element}&quot;);
+    }
+		// for loop through a range
+		for number in (1..4).rev() {
+        println!(&quot;{number}!&quot;);
+    }
+}</code></pre></pre>
+<h1 id="loop-loop"><a class="header" href="#loop-loop">Loop loop</a></h1>
+<p>The <code>loop</code> keyword in Rust is used to create an infinite loop. This means that the loop will continue to run until it is explicitly broken out of using the <code>break</code> keyword.</p>
+<p>The <code>loop</code> keyword can also be used as an expression. This means that the loop can return a value that can be used in other parts of the program. Here is an example:</p>
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>let mut counter = 0;
+let result = loop {
+    counter += 1;
+    if counter == 10 {
+        break counter * 2;
+    }
+};
+<span class="boring">}</span></code></pre></pre>
+<p>This code creates an infinite loop using the <code>loop</code> keyword. The loop increments the <code>counter</code> variable until it reaches a value of 10, at which point it breaks out of the loop and returns the value of <code>counter * 2</code> as the result.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="ownership"><a class="header" href="#ownership">Ownership</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="heap-vs-stack-vs-static-memory"><a class="header" href="#heap-vs-stack-vs-static-memory">Heap vs Stack vs Static Memory</a></h1>
+<p><strong><code>Static Memory</code></strong></p>
+<ul>
+<li>Static memory is a type of memory that is allocated at compile-time.</li>
+<li>It is used to store data that will not change during the execution of the program.</li>
+<li>static variables, string literals, program’s binary are stored here.</li>
+<li>Static memory is typically allocated in a section of memory known as the data segment.</li>
+<li>Since static memory is allocated at compile-time, it is not possible to dynamically allocate or deallocate memory in this segment at runtime.</li>
+<li>Cleans up after the program’s execution.</li>
+</ul>
+<p><code>Stack Memory</code></p>
+<ul>
+<li>contains function arguments, local variables,</li>
+<li>The stack stores values in the order it gets them and removes the values in the opposite order. This is referred to as <em>last in, first out</em>.</li>
+<li>Used for storing function call parameters and local variables.</li>
+<li>Limited in size and has a fixed size for each data item.</li>
+<li>Data on the stack must have a known, fixed size.</li>
+<li>Accessing data on the stack is faster than accessing data on the heap.</li>
+<li>Works well for data that needs to be accessed sequentially and is close to other data.</li>
+</ul>
+<p><code>Heap Memory</code></p>
+<ul>
+<li>Stores data in a less organized manner.</li>
+<li>Used for dynamically allocating memory at runtime.</li>
+<li>Allocating on the heap involves requesting a certain amount of space and receiving a pointer to that location.</li>
+<li>Can store data with an unknown or variable size at compile time.</li>
+<li>Requires the use of pointers to access data on the heap.</li>
+<li>Accessing data on the heap is slower than accessing data on the stack due to pointer indirection.</li>
+<li>Can accommodate larger amounts of data and data structures.</li>
+<li>Allows for flexible memory management but requires manual deallocation to avoid memory leaks.</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="what-is-ownership"><a class="header" href="#what-is-ownership">What is Ownership?</a></h1>
+<p><em>Ownership</em> is a set of rules that govern how a Rust program manages memory.</p>
+<p><strong>Rules of ownership:</strong></p>
+<ul>
+<li>Each value in Rust has an <em>owner</em>.</li>
+<li>There can only be one owner at a time.</li>
+<li>When the owner goes out of scope, the value will be dropped.</li>
+</ul>
+<p>Let’s take a look at this:</p>
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>let x = 5;
+let y = x;
+<span class="boring">}</span></code></pre></pre>
+<p>In this particular example, since x and y both are both simple data types and their size is fixed, both are pushed in stack. Therefore, when we bind the value of x to y, it copies the value of x to y.</p>
+<p>Now take a look at this example:</p>
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>let s1 = String::from(&quot;hello&quot;);
+let s2 = s1;
+println!(&quot;{}, world!&quot;, s1);
+<span class="boring">}</span></code></pre></pre>
+<p>Here, when we try to compile this, it will give an error.</p>
+<ul>
+<li>String is a non fixed datatype, therefore it’s value is stored in heap, while reference in the stack.</li>
+<li>after the line <code>let s2 = s1;</code>, Rust considers <code>s1</code> as no longer valid. Thus s1 is dropped.</li>
+<li>here s2 takes the ownership of “hello”.</li>
+<li>Technically this process is known as a move. In this example, we would say that <code>s1</code> was <em>moved</em> into <code>s2</code>.</li>
+</ul>
+<p>If we wanted to make a copy of s1 to s2 we would use:</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="ownership-in-functions"><a class="header" href="#ownership-in-functions">Ownership in Functions</a></h1>
+<p>The mechanics of passing a value to a function are similar to those when assigning a value to a variable. Passing a variable to a function will move or copy, just as assignment does.</p>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+    let s = String::from(&quot;hello&quot;);  // s comes into scope
+    takes_ownership(s);             // s's value moves into the function...
+}
+
+fn takes_ownership(some_string: String) {
+    println!(&quot;{}&quot;, some_string);
+}</code></pre></pre>
+<p>Similarly if a function returns something, it gives back ownership,</p>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+    let s1 = gives_ownership();         // gives_ownership moves its return
+} 
+
+fn gives_ownership() -&gt; String {             
+    let some_string = String::from(&quot;yours&quot;);
+    some_string //we are returning some_string
+}</code></pre></pre>
+<p>Finally a function can do both, giving and taking of ownership</p>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+    let s1 = String::from(&quot;hello&quot;);
+    let (s2, len) = calculate_length(s1);
+    println!(&quot;The length of '{}' is {}.&quot;, s2, len);
+}
+
+fn calculate_length(s: String) -&gt; (String, usize) {
+    let length = s.len(); // len() returns the length of a String
+    (s, length)
+}</code></pre></pre>
+<p>Here we are returning both the string that was passed in as a argument and the length, thus, we are transferring the ownership of s1 to s2.The mechanics of passing a value to a function are similar to those when assigning a value to a variable. Passing a variable to a function will move or copy, just as assignment does.</p>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+    let s = String::from(&quot;hello&quot;);  // s comes into scope
+    takes_ownership(s);             // s's value moves into the function...
+}
+
+fn takes_ownership(some_string: String) {
+    println!(&quot;{}&quot;, some_string);
+}</code></pre></pre>
+<p>Similarly if a function returns something, it gives back ownership,</p>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+    let s1 = gives_ownership();         // gives_ownership moves its return
+} 
+
+fn gives_ownership() -&gt; String {             
+    let some_string = String::from(&quot;yours&quot;);
+    some_string //we are returning some_string
+}</code></pre></pre>
+<p>Finally a function can do both, giving and taking of ownership</p>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+    let s1 = String::from(&quot;hello&quot;);
+    let (s2, len) = calculate_length(s1);
+    println!(&quot;The length of '{}' is {}.&quot;, s2, len);
+}
+
+fn calculate_length(s: String) -&gt; (String, usize) {
+    let length = s.len(); // len() returns the length of a String
+    (s, length)
+}</code></pre></pre>
+<p>Here we are returning both the string that was passed in as a argument and the length, thus, we are transferring the ownership of s1 to s2.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="passing-values-by-reference"><a class="header" href="#passing-values-by-reference">Passing values by Reference</a></h1>
+<p>A <em>reference</em> is like a pointer in that it’s an address we can follow to access the data stored at that address; that data is owned by some other variable. Unlike a pointer, a reference is guaranteed to point to a valid value of a particular type for the life of that reference.</p>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+    let s1 = String::from(&quot;hello&quot;);
+    let len = calculate_length(&amp;s1);
+    println!(&quot;The length of '{}' is {}.&quot;, s1, len);
+}
+
+fn calculate_length(s: &amp;String) -&gt; usize {
+    s.len()
+}</code></pre></pre>
+<p>Now keep in mind, the references by default are not mutable</p>
+<h2 id="mutable-reference"><a class="header" href="#mutable-reference">Mutable Reference</a></h2>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+    let mut s = String::from(&quot;hello&quot;);
+    change(&amp;mut s);
+}
+
+fn change(some_string: &amp;mut String) {
+    some_string.push_str(&quot;, world&quot;);
+}</code></pre></pre>
+<p>Some important stuff:</p>
+<ul>
+<li><strong>a single scope can only have one mutable reference of the same owner.</strong> This restriction is to avoid data races.</li>
+<li>Similarly, we cannot have immutable and mutable references to the same owner in the scope.</li>
+<li>We can have multiple mutable reference to the same owner.</li>
+</ul>
+<h2 id="how-rust-prevents-dangling-references"><a class="header" href="#how-rust-prevents-dangling-references">How Rust prevents Dangling References</a></h2>
+<p>a <em>dangling pointer</em>—a pointer that references a location in memory that may have been given to someone else—by freeing some memory while preserving a pointer to that memory.</p>
+<p>When we try to create a Dangline references in Rust:</p>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+    let reference_to_nothing = dangle();
+}
+
+fn dangle() -&gt; &amp;String {
+    let s = String::from(&quot;hello&quot;);
+    &amp;s
+}</code></pre></pre>
+<p>This will give an error. </p>
+<p>Why an error?</p>
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>fn dangle() -&gt; &amp;String { // dangle returns a reference to a String
+    let s = String::from(&quot;hello&quot;); // s is a new String
+    &amp;s // we return a reference to the String, s
+} // Here, s goes out of scope, and is dropped. Its memory goes away.
+  // Danger!
+<span class="boring">}</span></code></pre></pre>
+<p>The solution here is to return the <code>String</code> directly:</p>
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span>
+<span class="boring">fn main() {
+</span>fn no_dangle() -&gt; String {
+    let s = String::from(&quot;hello&quot;);
+    s
+}
+<span class="boring">}</span></code></pre></pre>
+<p>This works without any problems. Ownership is moved out, and nothing is deallocated.</p>
+<h3 id="the-rules-of-references"><a class="header" href="#the-rules-of-references"><a href="https://doc.rust-lang.org/book/ch04-02-references-and-borrowing.html#the-rules-of-references">The Rules of References</a></a></h3>
+<p>Let’s recap what we’ve discussed about references:</p>
+<ul>
+<li>At any given time, you can have <em>either</em> one mutable reference <em>or</em> any number of immutable references.</li>
+<li>References must always be valid.</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="slices"><a class="header" href="#slices">Slices</a></h1>
+<p><em>Slices</em> let you reference a contiguous sequence of elements in a collection rather than the whole collection. A slice is a kind of reference, so it does not have ownership.</p>
+<p>A <em>string slice</em> is a reference to part of a <code>String</code>, and it looks like this:</p>
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>let s = String::from(&quot;hello world&quot;);
+let hello = &amp;s[0..5];
+let world = &amp;s[6..11];
+<span class="boring">}</span></code></pre></pre>
+<p>function that takes in a <code>String</code> and return the first word of it:</p>
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>fn first_word(s: &amp;String) -&gt; &amp;str {
+    let bytes = s.as_bytes();
+
+    for (i, &amp;item) in bytes.iter().enumerate() {
+        if item == b' ' {
+            return &amp;s[0..i];
+        }
+    }
+
+    &amp;s[..]
+}
+<span class="boring">}</span></code></pre></pre>
+<p>Things to note:</p>
+<ul>
+<li>for returning the string slice, we use <code>&amp;str</code>.</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="structs"><a class="header" href="#structs">Structs</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="defining-structs"><a class="header" href="#defining-structs">Defining Structs</a></h1>
+<h2 id="defining-a-struct"><a class="header" href="#defining-a-struct">Defining a Struct</a></h2>
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>struct User {
+    active: bool,
+    username: String,
+    email: String,
+    sign_in_count: u64,
+}
+<span class="boring">}</span></code></pre></pre>
+<h2 id="creating-instance-of-our-struct"><a class="header" href="#creating-instance-of-our-struct">Creating Instance of our Struct</a></h2>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+    let user1 = User {
+        active: true,
+        username: String::from(&quot;someusername123&quot;),
+        email: String::from(&quot;someone@example.com&quot;),
+        sign_in_count: 1,
+    };
+}</code></pre></pre>
+<p>To access the specific value from a struct, we use dot notation.</p>
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>user1.email = String::from(&quot;anotheremail@example.com&quot;);
+<span class="boring">}</span></code></pre></pre>
+<p>Note that the entire instance must be mutable; Rust doesn’t allow us to mark only certain fields as mutable.</p>
+<h2 id="returning-struct-in-a-funtion"><a class="header" href="#returning-struct-in-a-funtion">Returning Struct in a funtion</a></h2>
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>fn build_user(email: String, username: String) -&gt; User {
+    User {
+        active: true,
+        username,
+        email,
+        sign_in_count: 1,
+    }
+}
+<span class="boring">}</span></code></pre></pre>
+<p>Note we are using <em>field init shorthand</em> syntax, since the parameter names and the struct field names are exactly the same</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="printing-with-derived-traits"><a class="header" href="#printing-with-derived-traits">Printing with Derived Traits</a></h1>
+<pre><pre class="playground"><code class="language-rust">#[derive(Debug)]
+struct Rectangle {
+    width: u32,
+    height: u32,
+}
+
+fn main() {
+    let rect1 = Rectangle {
+        width: 30,
+        height: 50,
+    };
+
+    println!(&quot;rect1 is {:?}&quot;, rect1);
+}</code></pre></pre>
+<p>Putting the specifier <code>:?</code> inside the curly brackets tells <code>println!</code> we want to use an output format called <code>Debug</code>. The <code>Debug</code> trait enables us to print our struct in a way that is useful for developers so we can see its value while we’re debugging our code.</p>
+<p>Rust <em>does</em> include functionality to print out debugging information, but we have to explicitly opt in to make that functionality available for our struct. To do that, we add the outer attribute <code>#[derive(Debug)]</code> just before the struct definition,</p>
+<p>To format the output we use <code>{:#?}</code></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="methods-in-structs"><a class="header" href="#methods-in-structs">Methods in Structs</a></h1>
+<pre><pre class="playground"><code class="language-rust">#[derive(Debug)]
+struct Rectangle {
+    width: u32,
+    height: u32,
+}
+
+impl Rectangle {
+		// We are implements area method for the Rectangle struct
+    fn area(&amp;self) -&gt; u32 {
+        self.width * self.height
+    }
+}
+
+fn main() {
+    let rect1 = Rectangle {
+        width: 30,
+        height: 50,
+    };
+
+    println!(
+        &quot;The area of the rectangle is {} square pixels.&quot;,
+        rect1.area()
+    );
+}</code></pre></pre>
+<ul>
+<li>Everything within this <code>impl</code> block will be associated with the <code>Rectangle</code> type</li>
+<li>Methods must have a parameter named <code>self</code> of type <code>Self</code> for their first parameter.</li>
+<li>Note that we still need to use the <code>&amp;</code> in front of the <code>self</code> shorthand to indicate that this method borrows the <code>Self</code> instance</li>
+<li>Methods can take ownership of <code>self</code></li>
+</ul>
+<h1 id="assosiated-functions"><a class="header" href="#assosiated-functions"><strong><strong><strong><strong>Assosiated Functions</strong></strong></strong></strong></a></h1>
+<p>All functions defined within an <code>impl</code> block are called <em>associated functions</em> because they’re associated with the type named after the <code>impl</code>. We can define associated functions that don’t have <code>self</code> as their first parameter because they don’t need an instance of the type to work with.</p>
+<pre><pre class="playground"><code class="language-rust">impl Rectangle {
+    fn square(size: u32) -&gt; Self {
+        Self {
+            width: size,
+            height: size,
+        }
+    }
+}
+
+fn main() {
+	let sq = Rectangle::square(3);
+}</code></pre></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="enums"><a class="header" href="#enums">Enums</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="defining-enums"><a class="header" href="#defining-enums">Defining Enums</a></h1>
+<p>Enums gives us a way of saying a value is one of a possible set of values.</p>
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>enum IpAddrKind {
+    V4,
+    V6,
+}
+<span class="boring">}</span></code></pre></pre>
+<p>Now, if a var is IpAddrKind Enum, it can be either V4 or V6.</p>
+<p>To use this we use:</p>
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>let four = IpAddrKind::V4;
+let six = IpAddrKind::V6;
+<span class="boring">}</span></code></pre></pre>
+<p>We can also put data inside each Enum variant.</p>
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>enum IpAddr {
+        V4(u8, u8, u8, u8),
+        V6(String),
+    }
+let home = IpAddr::V4(127, 0, 0, 1);
+let loopback = IpAddr::V6(String::from(&quot;::1&quot;));
+<span class="boring">}</span></code></pre></pre>
+<h1 id="impl-with-enum"><a class="header" href="#impl-with-enum">Impl with Enum</a></h1>
+<p>We can associate functions with Enums, just like in the case of Structs.</p>
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>enum Message {
+    Quit,
+    Move { x: i32, y: i32 },
+    Write(String),
+    ChangeColor(i32, i32, i32),
+}
+impl Message {
+        fn call(&amp;self) {
+            // method body would be defined here
+        }
+    }
+
+let m = Message::Write(String::from(&quot;hello&quot;));
+m.call();
+<span class="boring">}</span></code></pre></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="option-enum"><a class="header" href="#option-enum">Option Enum</a></h1>
+<p>Rust does not have nulls, but it does have an enum that can encode the concept of a value being present or absent. This enum is <code>Option&lt;T&gt;</code></p>
+<p>Defined as:</p>
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>enum Option&lt;T&gt; {
+    None,
+    Some(T), //Here T is a generic
+}
+<span class="boring">}</span></code></pre></pre>
+<ul>
+<li>Option Enum can be used in the code without ever explicitly bringing it to scope.</li>
+</ul>
+<p>To use Option Enum:</p>
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>let some_number = Some(5); //Here we are giving some_number a value (5)
+let some_char = Some('e');
+let absent_number: Option&lt;i32&gt; = None; // Here we don't have a value for absent_number
+<span class="boring">}</span></code></pre></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="match-statement"><a class="header" href="#match-statement">match Statement</a></h1>
+<p><code>match</code> allows us to compare a value against a series of patterns and then execute code based on which pattern matches.</p>
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>enum Coin {
+    Penny,
+    Nickel,
+    Dime,
+    Quarter,
+}
+
+fn value_in_cents(coin: Coin) -&gt; u8 {
+    match coin {
+        Coin::Penny =&gt; 1, //If Coin enum is of type Penny, return 1
+        Coin::Nickel =&gt; 5,
+        Coin::Dime =&gt; 10,
+        Coin::Quarter =&gt; 25,
+    }
+}
+<span class="boring">}</span></code></pre></pre>
+<h1 id="matching-with-options-enum"><a class="header" href="#matching-with-options-enum">Matching with Options Enum</a></h1>
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>fn plus_one(x: Option&lt;i32&gt;) -&gt; Option&lt;i32&gt; { //The plus one takes in an Option enum, ie value can be None
+    match x {
+        None =&gt; None,
+        Some(i) =&gt; Some(i + 1), //If value is not null, return value+1
+    }
+}
+<span class="boring">}</span></code></pre></pre>
+<h1 id="exhaustive-property"><a class="header" href="#exhaustive-property">Exhaustive Property</a></h1>
+<p>The match expression is exhaustive in nature. ie match expression must cover all the valid cases.</p>
+<p>We can make a default case by:</p>
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>let dice_roll = 9;
+    match dice_roll {
+        3 =&gt; add_fancy_hat(),
+        7 =&gt; remove_fancy_hat(),
+        _ =&gt; reroll(), //if the dice_roll is neither 3 nor 7
+    }
+<span class="boring">}</span></code></pre></pre>
+<p>If we want to use the value for the default match we can do:</p>
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>match dice_roll {
+        3 =&gt; add_fancy_hat(),
+        7 =&gt; remove_fancy_hat(),
+        other =&gt; move_player(other),
+    }
+<span class="boring">}</span></code></pre></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="common-collections"><a class="header" href="#common-collections">Common Collections</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="vectors"><a class="header" href="#vectors">Vectors</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="strings"><a class="header" href="#strings">Strings</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="hash-maps-1"><a class="header" href="#hash-maps-1">Hash Maps</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="error-handling"><a class="header" href="#error-handling">Error Handling</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="panic"><a class="header" href="#panic">panic!</a></h1>
+<p>Panics will print a failure message, unwind, clean up the stack, and quit.</p>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+    panic!(&quot;crash and burn&quot;);
+}</code></pre></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="the-result-enum"><a class="header" href="#the-result-enum">The Result Enum</a></h1>
+<p>the Result enum is defined as having two variants, Ok and Err, as follows:</p>
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>enum Result&lt;T, E&gt; {
+    Ok(T),
+    Err(E),
+}
+<span class="boring">}</span></code></pre></pre>
+<p><code>T</code> represents the type of the value that will be returned in a success case within the Ok variant, and <code>E</code> represents the type of the error that will be returned in a failure case within the Err variant</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+        <script>
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+
+    </div>
+    </body>
+</html>
